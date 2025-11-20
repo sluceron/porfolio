@@ -1,0 +1,16 @@
+:root {
+    --color-bg-main: #181824;
+    --color-bg-secondary: #24243e;
+    --color-bg-soft: #232323;
+    --color-accent: #FAEF5D;
+    --color-secondary: #5CF6E9;
+    --color-text-main: #ECECEC;
+    --color-hover: #F15BB5;
+    
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-elevated: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
+  

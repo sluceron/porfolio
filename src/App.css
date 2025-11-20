@@ -1,0 +1,119 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* --- Modal personalizado adaptado a la estética de Home.css --- */
+.ant-modal-content {
+  border-radius: 50px !important;
+  padding: 2.5rem !important;
+  background: var(--color-bg-main) !important;
+  border: 2px solid var(--color-secondary) !important;
+  box-shadow: var(--shadow-elevated) !important;
+  text-align: center !important;
+  font-family: inherit !important;
+}
+
+.ant-modal-header {
+  border-bottom: none !important;
+  text-align: center !important;
+}
+
+.ant-modal-title {
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  font-weight: 600 !important;
+  color: #9D7967 !important;
+  font-family: inherit !important;
+}
+
+.ant-modal-body p {
+  font-size: clamp(1.1rem, 2vw, 1.3rem) !important;
+  margin-bottom: 1.5rem;
+  color: var(--color-accent) !important;
+  line-height: 1.6;
+  font-family: inherit !important;
+}
+
+.ant-modal-body input {
+  margin-top: 0.5rem;
+  border: 2px solid var(--color-secondary) !important;
+  background: #ffffff !important;
+  border-radius: 50px !important;
+  padding: 0.8rem 1rem;
+  font-family: inherit !important;
+  width: 100%;
+  max-width: 300px;
+}
+
+.ant-btn {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  padding: 1rem 2.5rem;
+  border-radius: 50px !important;
+  font-family: inherit !important;
+}
+
+.ant-btn-primary {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-bg-main) !important;
+}
+
+.ant-btn-primary:hover {
+  background-color: var(--color-secondary) !important;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-elevated);
+}
+
+.ant-btn-default {
+  border-color: var(--color-accent) !important;
+  color: var(--color-accent) !important;
+}
+
+.ant-btn-default:hover {
+  background-color: var(--color-accent) !important;
+  color: var(--color-bg-main) !important;
+  transform: translateY(-3px);
+}
+
+.ant-modal {
+  top: 20% !important;
+}
