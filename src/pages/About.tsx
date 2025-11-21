@@ -183,7 +183,7 @@ const About = () => {
               <a href="mailto:santiagoluceron@icloud.com" className="btn-primary">
                 Enviar mensaje
               </a>
-              <a href="/cv.pdf" download className="btn-secondary">
+              <a href="/public/CV_Santiago_Luceron.pdf" download className="btn-secondary">
               Descargar CV
               </a>
             </div>
