@@ -17,9 +17,7 @@ const Home = () => {
             <Link to="/about" className="btn btn-primary">
               Sobre mí
             </Link>
-            <Link to="/projects" className="btn btn-secondary">
-              Ver Proyectos
-            </Link>
+
             <Link to="/contact" className="btn btn-primary">
               Contactar
             </Link>
