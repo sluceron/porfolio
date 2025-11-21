@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Portfolio Creativo. Todos los derechos reservados.</p>
+          <p>&copy; {currentYear} Santiago Lucerón. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

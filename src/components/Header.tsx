@@ -10,7 +10,6 @@ const Header = () => {
   const navLinks = [
     { name: 'Inicio', path: '/' },
     { name: 'Sobre mí', path: '/about' },
-
     { name: 'Contacto', path: '/contact' }
   ]
 
@@ -18,7 +17,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo">
-          Portfolio
+          Santiago Lucerón
         </Link>
 
         <nav className="nav-desktop">

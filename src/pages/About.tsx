@@ -183,9 +183,6 @@ const About = () => {
               <a href="mailto:santiagoluceron@icloud.com" className="btn-primary">
                 Enviar mensaje
               </a>
-              <a href="/portfolio" className="btn-secondary">
-                Ver portfolio
-              </a>
             </div>
           </div>
         </div>
