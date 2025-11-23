@@ -6,6 +6,8 @@ import Contact from './pages/Contact';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+
+
 function App() {
   return (
     <Router>
@@ -15,6 +17,7 @@ function App() {
         <Route path="/about" component={About} />
 
         <Route path="/contact" component={Contact} />
+
       </Switch>
       <Footer />
     </Router>

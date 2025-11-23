@@ -1,163 +1,18 @@
-.about {
-    min-height: 100vh;
-    padding-top: 80px;
-  }
-  
-  .about-hero {
-    padding: 5rem 2rem 3rem;
-    text-align: center;
-    background: linear-gradient(135deg, var(--color-bg-main) 0%, var(--color-bg-secondary) 100%);
-  }
-  
-  .about-hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    margin-bottom: 1rem;
-    color: var(--color-accent);
-  }
-  
-  .about-subtitle {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
-    opacity: 0.8;
-  }
-  
-  .about-content {
-    padding: 4rem 2rem;
-  }
-  
-  .about-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    gap: 4rem;
-  }
-  
-  .about-text h2 {
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    margin-bottom: 1.5rem;
-    color: var(--color-secondary);
-  }
-  
-  .about-text p {
-    font-size: clamp(1.1rem, 1.5vw, 1.2rem);
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
-  }
-  
-  .about-skills h2 {
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    margin-bottom: 2rem;
-    color: var(--color-secondary);
-    text-align: center;
-  }
-  
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-  
-  .skill-card {
-    background-color: var(--color-bg-secondary);
-    padding: 2rem;
-    border-radius: 15px;
-    border: 2px solid transparent;
-    transition: var(--transition-smooth);
-  }
-  
-  .skill-card:hover {
-    border-color: var(--color-accent);
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-elevated);
-  }
-  
-  .skill-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-accent);
-  }
-  
-  .skill-card p {
-    opacity: 0.8;
-    line-height: 1.6;
-  }
-  
-  @media (max-width: 768px) {
-    .about-hero {
-      padding: 3rem 1.5rem 2rem;
-    }
-  
-    .about-content {
-      padding: 2rem 1.5rem;
-    }
-  
-    .skills-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  /* --- Responsive adjustments for About page --- */
-  
-  /* Mobile devices (max-width: 768px) */
-  @media (max-width: 768px) {
-    .about-container {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      padding: 0 1rem;
-    }
-  
-    .about-text h2,
-    .about-subtitle {
-      text-align: center;
-    }
-  
-    .about-text p {
-      font-size: clamp(1rem, 3vw, 1.1rem);
-    }
-  
-    .skill-card {
-      padding: 1.5rem;
-    }
-  }
-  
-  /* Tablet devices (769px - 1024px) */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .about-container {
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      padding: 0 2rem;
-    }
-  
-    .about-hero h1 {
-      font-size: clamp(2.2rem, 4vw, 3.5rem);
-    }
-  
-    .about-subtitle {
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    }
-  
-    .skill-card {
-      padding: 1.8rem;
-    }
-  }
-.about-text p {
-  text-align: justify;
-}
-
-.skill-card p {
-  text-align: justify;
-}
-/* --- General Styles --- */
+/* === ABOUT PAGE WRAPPER === */
 .about {
   min-height: 100vh;
   padding-top: 80px;
 }
 
+/* === HERO SECTION === */
 .about-hero {
   padding: 5rem 2rem 3rem;
   text-align: center;
-  background: linear-gradient(135deg, var(--color-bg-main) 0%, var(--color-bg-secondary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-main) 0%,
+    var(--color-bg-secondary) 100%
+  );
 }
 
 .about-hero h1 {
@@ -171,11 +26,12 @@
   opacity: 0.8;
 }
 
-/* --- Content Layout --- */
+/* === MAIN CONTENT SECTION === */
 .about-content {
   padding: 4rem 2rem;
 }
 
+/* === GRID LAYOUT WRAPPER === */
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -183,7 +39,7 @@
   gap: 4rem;
 }
 
-/* --- Text Styles --- */
+/* === ABOUT TEXT SECTION === */
 .about-text h2 {
   font-size: clamp(2rem, 3vw, 2.5rem);
   margin-bottom: 1.5rem;
@@ -198,7 +54,7 @@
   text-align: justify;
 }
 
-/* --- Skills Section --- */
+/* === SKILLS SECTION === */
 .about-skills h2 {
   font-size: clamp(2rem, 3vw, 2.5rem);
   margin-bottom: 2rem;
@@ -206,12 +62,14 @@
   text-align: center;
 }
 
+/* === SKILLS GRID === */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 
+/* === INDIVIDUAL SKILL CARD === */
 .skill-card {
   background-color: var(--color-bg-secondary);
   padding: 2rem;
@@ -244,9 +102,7 @@
   width: 100%;
 }
 
-/* --- Responsive Styles --- */
-
-/* Mobile devices (max-width: 768px) */
+/* === RESPONSIVE — MOBILE === */
 @media (max-width: 768px) {
   .about-hero {
     padding: 3rem 1.5rem 2rem;
@@ -281,7 +137,7 @@
   }
 }
 
-/* Tablet devices (769px - 1024px) */
+/* === RESPONSIVE — TABLET === */
 @media (min-width: 769px) and (max-width: 1024px) {
   .about-container {
     grid-template-columns: 1fr 1fr;
@@ -301,7 +157,8 @@
     padding: 1.8rem;
   }
 }
-/* CTA buttons styling to match global buttons */
+
+/* === CALL TO ACTION BUTTONS === */
 .cta-buttons a {
   display: inline-block;
   padding: 1rem 2.5rem;
@@ -335,4 +192,113 @@
   background-color: var(--color-accent);
   color: var(--color-bg-main);
   transform: translateY(-2px);
+}
+
+/* === BRANDS / LOGO SLIDER SECTION === */
+/* CONTENEDOR PRINCIPAL IGUAL QUE ANTES */
+.about-brands {
+  padding: 4rem 2rem 5rem;
+  background: radial-gradient(
+    circle at top,
+    rgba(250, 239, 93, 0.04),
+    transparent 60%
+  );
+}
+
+.about-brands-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-brands h2 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+.about-brands-text {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.05rem;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+/* SLIDER DE LOGOS */
+
+.logo-slider {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem 0;
+}
+
+/* CAMBIOS IMPORTANTES AQUÍ */
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: max-content; /* el track se hace tan ancho como necesite */
+  animation: logo-slide 35s linear infinite;
+}
+
+.logo-slider img {
+  height: 45px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: var(--transition-smooth);
+  flex-shrink: 0; /* los logos no se encogen, mantiene proporciones */
+}
+
+.logo-slider img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Degradados en los lados para efecto fade */
+.logo-slider::before,
+.logo-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logo-slider::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg-main), transparent);
+}
+
+.logo-slider::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg-main), transparent);
+}
+
+/* ANIMACIÓN INFINITA SUAVE */
+@keyframes logo-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-brands {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .logo-track {
+    gap: 2rem;
+  }
+
+  .logo-slider img {
+    height: 35px;
+  }
 }

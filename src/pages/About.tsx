@@ -1,6 +1,14 @@
 import '../styles/About.css'
+import { useEffect } from 'react';
 
 const About = () => {
+  useEffect(() => {
+    const track = document.querySelector('.logo-track');
+    if (track) {
+      track.innerHTML += track.innerHTML;
+    }
+  }, []);
+
   return (
     <div className="about">
       <section className="about-hero">
@@ -127,50 +135,41 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="skill-card">
-                <div className="skill-icon">⚙️</div>
-                <h3>Gestión de Proyectos</h3>
-                <p>Metodologías Agile, Design Thinking y liderazgo de equipos creativos</p>
-                <div className="skill-tools">
-                  <span>Scrum </span>
-                  <span>Jira </span>
-                  <span>Trello </span>
-                  <span>Notion </span>
-                </div>
-              </div>
             </div>
           </div>
 
-          <div className="about-values">
-            <h2>Valores que me Definen</h2>
-            <div className="values-list">
-              <div className="value-item">
-                <span className="value-icon">✨</span>
-                <h4>Creatividad e Innovación</h4>
-                <p>Buscar constantemente nuevas formas de expresión visual</p>
-              </div>
-              <div className="value-item">
-                <span className="value-icon">🎯</span>
-                <h4>Pensamiento Estratégico</h4>
-                <p>Diseño con propósito, alineado con objetivos de negocio</p>
-              </div>
-              <div className="value-item">
-                <span className="value-icon">🔍</span>
-                <h4>Atención al Detalle</h4>
-                <p>Cuidado obsesivo por cada elemento visual</p>
-              </div>
-              <div className="value-item">
-                <span className="value-icon">🤝</span>
-                <h4>Trabajo en Equipo</h4>
-                <p>Colaboración efectiva en proyectos multidisciplinarios</p>
-              </div>
-              <div className="value-item">
-                <span className="value-icon">🚀</span>
-                <h4>Adaptabilidad</h4>
-                <p>Aprendizaje continuo y evolución con nuevas tecnologías</p>
-              </div>
-            </div>
+      <section className="about-brands">
+        <div className="about-brands-container">
+          <h2>Marcas con las que he trabajado</h2>
+          <p className="about-brands-text">
+          Mi trabajo abarca proyectos de branding, diseño de identidad visual, merchandising y visual merchandising, papelería corporativa, diseño gráfico y piezas de comunicación para marcas de diferentes sectores, siempre cuidando la coherencia entre estrategia, estética y experiencia de marca.
+          </p>
+
+      <div className="logo-slider" aria-label="Empresas para las que he trabajado">
+          <div className="logo-track">
+
+          <img src="https://www.shutterstock.com/image-photo/coca-cola-logo-on-vibrant-600nw-2524254995.jpg" alt="Coca-Cola" />
+          <img src="https://guiaimpresion.com/wp-content/uploads/2020/05/Heineken-emblema.jpg" alt="Heineken Internacional" />
+          <img src="https://images.seeklogo.com/logo-png/43/1/damm-logo-png_seeklogo-438928.png" alt="Grupo Damm"  />
+          <img src="https://www.compromisorse.com/upload/noticias/011/11397/Mahou.png" alt="Mahou San Miguel"  />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Pernod_Ricard_logo_2019.svg" alt="Pernod Ricard"  />
+          <img src="https://images.seeklogo.com/logo-png/8/1/maxxium-logo-png_seeklogo-89659.png" alt="Maxxium"  />
+          
+          <img src="https://clinicadentalbances.com/wp-content/uploads/2025/06/seguro-dental-asisa-en-santa-cruz-de-tenerife.jpg" alt="Asisa" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Integrated_Service_Solutions_%28logo%29.svg" alt="ISS" />
+
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Altadis_web.png" alt="Altadis" />
+          <img src="https://www.underconsideration.com/brandnew/archives/british_american_tobacco_logo_before_after.png" alt="British American Tobacco" />
+          
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Nintendo.svg" alt="Nintendo" />
+          <img src="https://objectway.com/wp-content/uploads/2023/07/logo_BNP_paribas.svg" alt="BNP Paribas" />
+          <img src="https://www.brandemia.org/wp-content/uploads/2012/06/version_horizontal.jpg" alt="Repsol" />
+
           </div>
+      </div>
+
+  </div>
+</section>
 
           <div className="about-cta">
             <h2>¿Trabajamos juntos?</h2>
@@ -190,6 +189,8 @@ const About = () => {
           </div>
         </div>
       </section>
+     
+
     </div>
   )
 }

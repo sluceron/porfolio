@@ -1,0 +1,126 @@
+.gallery {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--color-text-main);
+  }
+  
+  @media (max-width: 600px) {
+    .gallery {
+      padding: 3rem 1rem;
+    }
+    .photo-item {
+      box-shadow: none;
+    }
+  }
+  
+  .gallery h1 {
+    color: var(--color-accent);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .photo-item {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-smooth);
+    position: relative;
+    outline: none;
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+  }
+  
+  @media (hover: hover) {
+    .photo-item:hover,
+    .photo-item:focus {
+      box-shadow: var(--shadow-elevated);
+      transform: scale(1.03);
+    }
+  }
+  
+  .photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--color-bg-main);
+    background: rgba(255, 255, 255, 0.423);
+    padding: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  /* Modal */
+  
+  .modal {
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+  }
+  
+  .modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: auto;
+    border-radius: 15px;
+    background: var(--color-bg-secondary);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-elevated);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: var(--color-accent);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: var(--color-secondary);
+    outline: none;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
