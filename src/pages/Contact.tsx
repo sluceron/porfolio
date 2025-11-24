@@ -1,8 +1,23 @@
 import ContactForm from '../components/ContactForm'
 import '../styles/Contact.css'
+import { useLocation } from 'react-router-dom'
 
 const Contact = () => {
+  const location = useLocation()
+  const searchParams = new URLSearchParams(location.search)
+  const servicesParam = searchParams.get('services') || ''
+  const selectedServices = servicesParam ? servicesParam.split(',') : []
+
+  const serviceNamesMap: Record<string, string> = {
+    'web': 'Desarrollo Web',
+    'marketing': 'Marketing Digital',
+    'seo': 'SEO',
+    'branding': 'Branding',
+    'design': 'Diseño UI/UX'
+  }
+  const selectedServiceNames = selectedServices.map(s => serviceNamesMap[s] || s)
   return (
+
     <div className="contact">
       <section className="contact-hero">
         <h1>Contacto</h1>
@@ -39,7 +54,8 @@ const Contact = () => {
           </div>
 
           <div className="contact-form-wrapper">
-            <ContactForm />
+
+            <ContactForm preselectedServices={selectedServiceNames} />
           </div>
         </div>
       </section>

@@ -1,10 +1,12 @@
-import emailjs from '@emailjs/browser'
 import { useState } from 'react'
-import { ContactFormData } from '../types'
 import '../styles/ContactForm.css'
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState<ContactFormData>({
+interface ContactFormProps {
+  preselectedServices?: string[];
+}
+
+const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
@@ -22,34 +24,32 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    
 
-    const serviceID = 'service_kc4d5nr'
-    const templateID = 'template_l8ywbrq'
-    const publicKey = 'mYRhInMQrTkQiSumR'
-
-    const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      message: formData.message
-    }
-
-    emailjs.send(serviceID, templateID, templateParams, publicKey)
-      .then(() => {
-        console.log('Email enviado correctamente')
-        setIsSubmitted(true)
-
-        setTimeout(() => {
-          setFormData({ name: '', email: '', message: '' })
-          setIsSubmitted(false)
-        }, 3000)
-      })
-      .catch((error: unknown) => {
-        console.error('Error al enviar email:', error)
-      })
+    console.log('Formulario enviado:', { ...formData, preselectedServices })
+    
+    setIsSubmitted(true)
+    
+    // Reset form después de 3 segundos
+    setTimeout(() => {
+      setFormData({ name: '', email: '', message: '' })
+      setIsSubmitted(false)
+    }, 3000)
   }
 
   return (
+    
     <form className="contact-form" onSubmit={handleSubmit}>
+       {preselectedServices.length > 0 && (
+        <div className="preselected-services-info">
+          <strong>Servicios seleccionados:</strong>
+          <ul>
+            {preselectedServices.map((service, idx) => (
+              <li key={idx}>{service}</li>
+            ))}
+          </ul>
+        </div>
+      )}
       <h2>Envíame un mensaje</h2>
 
       <div className="form-group">
