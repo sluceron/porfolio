@@ -37,10 +37,20 @@ const Services = () => {
               tabIndex={0}
               onKeyDown={e => { if (e.key === 'Enter') handleSelect(service.id) }}
             >
-              <div className="service-icon">{service.icon}</div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+              <div className="card-inner">
+                <div className="card-front">
+                <div className="service-icon" style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '1rem' }}>
+                {service.icon}
+              </div>
+              <h3 style={{ textAlign: 'center' }}>{service.title}</h3>
+                </div>
+                <div className="card-back">
+                  <p>{service.description}</p>
+                </div>
+              </div>
             </div>
+
+
           ))}
         </div>
         </div>
