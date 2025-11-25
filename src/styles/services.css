@@ -15,7 +15,7 @@
   margin-bottom: 0.5rem;
 }
   .services-subtitle {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
     opacity: 0.8;
     max-width: 700px;
     margin: 0 auto;
@@ -70,9 +70,9 @@
     height: 100%;
     backface-visibility: hidden;
     border-radius: 15px;
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
+    padding: 2rem 1rem;
+    display: columnn;
+    justify-content: flex-start;
     align-items: center;
     background-color: var(--color-bg-secondary);
     box-shadow: var(--shadow-subtle);
@@ -84,6 +84,7 @@
 
   .card-back {
     transform: rotateY(180deg);
+    
   }
   
   .service-card.selected {
@@ -94,13 +95,18 @@
   
   .service-icon {
     font-size: 3rem;
-    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
   }
   
   .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--color-secondary);
+    text-align: center;
   }
   
   .service-card p {
@@ -149,14 +155,6 @@
 @media (max-width: 480px) {
   .services-hero {
     padding: 3rem 1.5rem;
-  }
-
-  .services-subtitle {
-    font-size: 1rem;
-  }
-
-  .service-icon {
-    font-size: 2.5rem;
   }
 
   .service-card h3 {
