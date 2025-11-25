@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import '../styles/ContactForm.css'
 
 interface ContactFormProps {
@@ -13,6 +14,8 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
   })
 
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -22,25 +25,38 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+    setIsLoading(true)
+    setError(null)
 
-    console.log('Formulario enviado:', { ...formData, preselectedServices })
-    
-    setIsSubmitted(true)
-    
-    // Reset form después de 3 segundos
-    setTimeout(() => {
-      setFormData({ name: '', email: '', message: '' })
-      setIsSubmitted(false)
-    }, 3000)
+    try {
+      await emailjs.send(
+        'service_kc4d5nr',            // Sustituye por el Service ID de EmailJS
+        'template_l8ywbrq',           // Sustituye por el Template ID de EmailJS
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          servicios: preselectedServices.join(', ') || 'No seleccionado'
+        },
+        'mYRhInMQrTkQiSumR'             // Sustituye por tu Public Key (antes USER_ID)
+      )
+      setIsSubmitted(true)
+      setTimeout(() => {
+        setFormData({ name: '', email: '', message: '' })
+        setIsSubmitted(false)
+      }, 3000)
+    } catch (err) {
+      setError('No se pudo enviar el mensaje. Inténtalo más tarde.')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
-    
     <form className="contact-form" onSubmit={handleSubmit}>
-       {preselectedServices.length > 0 && (
+      {preselectedServices.length > 0 && (
         <div className="preselected-services-info">
           <strong>Servicios seleccionados:</strong>
           <ul>
@@ -91,9 +107,15 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
         />
       </div>
 
-      <button type="submit" className="submit-btn" disabled={isSubmitted}>
-        {isSubmitted ? '¡Mensaje Enviado!' : 'Enviar Mensaje'}
+      <button type="submit" className="submit-btn" disabled={isSubmitted || isLoading}>
+        {isLoading ? 'Enviando...' : isSubmitted ? '¡Mensaje Enviado!' : 'Enviar Mensaje'}
       </button>
+
+      {error && (
+        <p className="error-message">
+          {error}
+        </p>
+      )}
 
       {isSubmitted && (
         <p className="success-message">
