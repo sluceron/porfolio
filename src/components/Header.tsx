@@ -19,7 +19,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo">
-          Santiago Lucerón
+          SantiagoLuceron.com
         </Link>
 
         <nav className="nav-desktop">

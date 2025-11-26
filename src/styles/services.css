@@ -148,7 +148,26 @@
       gap: 2rem;
     }
     .service-card {
-      padding: 1.5rem;
+      padding: 1rem;
+    }
+    .service-card .card-inner {
+      height: auto;
+      transform: none !important;
+      
+    }
+
+    .service-card:hover .card-inner {
+      transform: none !important;
+    }
+
+    .card-front, .card-back {
+      position: relative;
+      transform: none !important;
+      backface-visibility: visible !important;
+    }
+
+    .card-back {
+      display: none;
     }
   }
 
@@ -158,7 +177,12 @@
   }
 
   .service-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  .service-card {
+    width: 120%;
+    margin: 2;
   }
 
   .service-card p {

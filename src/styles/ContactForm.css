@@ -155,4 +155,14 @@
   .form-group {
     margin-bottom: 1.5rem;
   }
+
+  .contact-form {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .preselected-services-info {
+    padding: 1rem 1rem !important;
+    font-size: 1rem !important;
+  }
 }

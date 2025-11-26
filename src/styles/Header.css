@@ -23,6 +23,8 @@
   font-weight: 700;
   color: var(--color-accent);
   transition: var(--transition-smooth);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter !important;
 }
 
 .logo:hover {
