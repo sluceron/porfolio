@@ -1,0 +1,164 @@
+/* Estilos para DownloadCV.css - Mobile First */
+
+.download-cv-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.download-cv-content {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.download-cv-title {
+  font-size: 1.5rem !important;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.download-cv-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.download-cv-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.download-cv-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px #007bff;
+}
+
+.download-cv-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.download-cv-button  {
+        display: inline-block;
+        padding: 1.5rem 2rem !important;
+        border-radius: 50px;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        text-align: center;
+        transition: var(--transition-smooth);
+        margin-right: 0.5rem;
+        margin-top: 1.5rem;
+        cursor: pointer;
+
+      }
+
+.download-cv-button-primary {
+    background-color: var(--color-accent);
+    color: var(--color-bg-main);
+    border: 2px solid var(--color-accent);
+  }
+.download-cv-button-primary:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    transform: translateY(-2px);
+  }
+.download-cv-button-secondary {
+    background-color: var(--color-bg-main);
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+  }
+.download-cv-button-secondary:hover {
+    background-color: var(--color-accent);
+    color: var(--color-bg-main);
+    transform: translateY(-2px);
+  }
+
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 600px) {
+  .download-cv-content {
+    padding: 2rem 2.5rem 3rem;
+  }
+
+  .download-cv-title {
+    font-size: 1rem;
+  }
+
+  .download-cv-input {
+    font-size: 1rem;
+  }
+
+  .download-cv-button {
+    font-size: 1rem;
+    width: auto;
+  }
+
+  .download-cv-buttons {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .download-cv-content {
+    padding: 2.5rem 3rem 3.5rem;
+    max-width: 500px;
+  }
+
+  .download-cv-title {
+    font-size: 2rem;
+  }
+
+  .download-cv-input {
+    font-size: 1.125rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .download-cv-button {
+    font-size: 1.125rem;
+    padding: 1.25rem 3rem;
+  }
+}
+
+/* Large screen styles */
+@media (min-width: 1024px) {
+  .download-cv-content {
+    padding: 2rem 2rem 2rem;
+    max-width: 600px;
+    align-items: center;
+  }
+
+  .download-cv-title {
+    font-size: 2.5rem;
+  }
+
+  .download-cv-input {
+    font-size: 1.25rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .download-cv-button {
+    font-size: 1.25rem;
+    padding: 1.5rem 3.5rem;
+  }
+}

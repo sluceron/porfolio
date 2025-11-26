@@ -1,5 +1,6 @@
 import "../styles/About.css";
 import { useEffect } from "react";
+import DownloadCV from "../components/DownloadCV";
 
 const About = () => {
   useEffect(() => {
@@ -292,13 +293,7 @@ const About = () => {
               >
                 Enviar mensaje
               </a>
-              <a
-                href="/public/CV_Santiago_Luceron.pdf"
-                download
-                className="btn-secondary"
-              >
-                Descargar CV
-              </a>
+              <DownloadCV className="btn-secondary" />
             </div>
           </div>
         </div>

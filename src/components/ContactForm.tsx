@@ -17,6 +17,9 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
+  const [startTime] = useState(Date.now());
+  const [userInteracted, setUserInteracted] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -27,6 +30,27 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    const form = e.target as HTMLFormElement;
+    const data = new FormData(form);
+
+    // Honeypot
+    if (data.get("antiBot")) {
+      setError("Acción no permitida.");
+      return;
+    }
+
+    // Tiempo mínimo
+    if (Date.now() - startTime < 1500) {
+      setError("Operación demasiado rápida. ¿Eres humano?");
+      return;
+    }
+
+    // Interacción humana
+    if (!userInteracted) {
+      setError("Interactúa con el formulario antes de enviarlo.");
+      return;
+    }
+
     setIsLoading(true)
     setError(null)
 
@@ -56,6 +80,12 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="antiBot"
+        style={{ display: "none" }}
+        autoComplete="off"
+      />
       {preselectedServices.length > 0 && (
         <div className="preselected-services-info">
           <strong>Servicios seleccionados:</strong>
@@ -76,6 +106,7 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
           name="name"
           value={formData.name}
           onChange={handleChange}
+          onFocus={() => setUserInteracted(true)}
           required
           placeholder="Tu nombre"
         />
@@ -89,6 +120,7 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
           name="email"
           value={formData.email}
           onChange={handleChange}
+          onFocus={() => setUserInteracted(true)}
           required
           placeholder="tu@email.com"
         />
@@ -101,13 +133,14 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
           name="message"
           value={formData.message}
           onChange={handleChange}
+          onFocus={() => setUserInteracted(true)}
           required
           rows={6}
           placeholder="Cuéntame sobre tu proyecto..."
         />
       </div>
 
-      <button type="submit" className="submit-btn" disabled={isSubmitted || isLoading}>
+      <button type="submit" className="submit-btn" disabled={isSubmitted || isLoading || !userInteracted}>
         {isLoading ? 'Enviando...' : isSubmitted ? '¡Mensaje Enviado!' : 'Enviar Mensaje'}
       </button>
 

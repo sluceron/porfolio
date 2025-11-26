@@ -167,7 +167,7 @@
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  text-align: center;
+  text-align: flex;
   transition: var(--transition-smooth);
   margin-right: 1rem;
   margin-top: 1rem;
