@@ -20,7 +20,11 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo">
-          SantiagoLuceron.com
+          <img
+            src="/images/logo.png"
+            alt="Santiago Lucerón"
+            className="logo-image"
+          />
         </Link>
 
         <nav className="nav-desktop">
