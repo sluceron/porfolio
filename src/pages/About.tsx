@@ -1,6 +1,8 @@
 import "../styles/About.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import DownloadCV from "../components/DownloadCV";
+
 
 const About = () => {
   useEffect(() => {
@@ -287,12 +289,12 @@ const About = () => {
               hablemos.
             </p>
             <div className="cta-buttons">
-              <a
-                href="mailto:santiagoluceron@icloud.com"
+              <Link
+                to="/contact"
                 className="btn-primary"
               >
                 Enviar mensaje
-              </a>
+              </Link>
               <DownloadCV className="btn-secondary" />
             </div>
           </div>
