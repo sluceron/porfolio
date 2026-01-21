@@ -23,6 +23,7 @@ const Contact = () => {
         <h1>Contacto</h1>
         <p className="contact-subtitle">
         ¿Tienes un proyecto en mente? <p>Hablemos y hagamos algo increíble juntos</p>
+        
         </p>
       </section>
 

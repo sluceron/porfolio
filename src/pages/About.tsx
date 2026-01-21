@@ -2,7 +2,14 @@ import "../styles/About.css";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import DownloadCV from "../components/DownloadCV";
-
+import Lottie from "lottie-react";
+import webdesign from "../assets/images/lotties/webdesign.json";
+import design from "../assets/images/lotties/design.json";
+import ai from "../assets/images/lotties/ai.json";
+import rating from "../assets/images/lotties/rating.json";
+import teacher from "../assets/images/lotties/teacher.json";
+import copy from "../assets/images/lotties/copy.json";
+import photo from "../assets/images/lotties/photo.json";
 
 const About = () => {
   useEffect(() => {
@@ -98,7 +105,7 @@ const About = () => {
             <h2>Áreas de Especialización</h2>
             <div className="skills-grid">
               <div className="skill-card">
-                <div className="skill-icon">🎨</div>
+              <div className="about-lottie"> <Lottie animationData={design} loop={true} /> </div>
                 <h3>Diseño Gráfico & Branding</h3>
                 <p>
                   Identidad corporativa, packaging, diseño editorial y dirección
@@ -114,7 +121,9 @@ const About = () => {
               </div>
 
               <div className="skill-card">
-                <div className="skill-icon">💻</div>
+              <div className="about-lottie">
+              <Lottie animationData={webdesign} loop={true} />
+              </div>
                 <h3>Diseño Web & UX/UI</h3>
                 <p>
                   Desarrollo de sitios web responsivos y experiencias digitales
@@ -129,7 +138,7 @@ const About = () => {
               </div>
 
               <div className="skill-card">
-                <div className="skill-icon">📸</div>
+              <div className="about-lottie"> <Lottie animationData={photo} loop={true} /> </div>
                 <h3>Fotografía & Audiovisual</h3>
                 <p>
                   Fotografía de producto, publicitaria, edición de video y
@@ -144,7 +153,7 @@ const About = () => {
               </div>
 
               <div className="skill-card">
-                <div className="skill-icon">🤖</div>
+              <div className="about-lottie"> <Lottie animationData={ai} loop={true} /> </div>
                 <h3>IA & Tecnologías Emergentes</h3>
                 <p>
                   Integración de herramientas de IA generativa en flujos de
@@ -160,7 +169,7 @@ const About = () => {
               </div>
 
               <div className="skill-card">
-                <div className="skill-icon">📱</div>
+              <div className="about-lottie"> <Lottie animationData={rating} loop={true} /> </div>
                 <h3>Marketing Digital</h3>
                 <p>
                   Estrategias de contenido visual, campañas en redes sociales y
@@ -175,7 +184,7 @@ const About = () => {
               </div>
 
               <div className="skill-card">
-                <div className="skill-icon">🎓</div>
+              <div className="about-lottie"> <Lottie animationData={teacher} loop={true} /> </div>
                 <h3>Profesor de Marketing, Diseño & Tecnología</h3>
                 <p>
                   Imparto clases integrales que abarcan marketing digital y sus
@@ -190,7 +199,7 @@ const About = () => {
               </div>
 
               <div className="skill-card">
-                <div className="skill-icon">✍️</div>
+              <div className="about-lottie"> <Lottie animationData={copy} loop={true} /> </div>
                 <h3>Copywriting y Storytelling</h3>
                 <p>
                 Redacción creativa, creación de historias de marca y contenidos persuasivos que conectan y venden.
