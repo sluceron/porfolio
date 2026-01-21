@@ -15,10 +15,7 @@
 }
   
 .gallery h1 {
-    color: var(--color-accent);
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
 }
   
 .gallery-grid {
@@ -169,9 +166,14 @@
   .gallery-hero {
     width: 100vw; /* Ocupa todo el ancho de la ventana */
     margin-left: calc(-50vw + 50%); /* Centra el contenido dentro del ancho total */
-    padding: 5rem 2rem 3rem;
+    padding: 10rem 2rem 2rem;
     text-align: center;
     background: linear-gradient(135deg, var(--color-bg-main) 0%, var(--color-bg-secondary) 100%);
+}
+
+.gallery-subtitle {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  opacity: 0.8;
 }
 
   .modal {

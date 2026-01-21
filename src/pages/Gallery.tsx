@@ -306,6 +306,9 @@ const projects: Project[] = [
       <section className="gallery">
         <section className="gallery-hero">
         <h1>Porfolio de Proyectos</h1>
+        <p className="gallery-subtitle">
+          Aquí puedes ver algunos de mis proyectos de diseño gráfico y branding. Haz clic en cualquier proyecto para ver más detalles.
+        </p>
         </section>
         <Slider {...sliderSettings} className="gallery-slider">
           {projects.map(project => (

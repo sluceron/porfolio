@@ -4,7 +4,7 @@
 }
   
 .services-hero {
-  padding: 5rem 2rem 3rem;
+  padding: 10rem 2rem 2rem;
   text-align: center;
   background: linear-gradient(135deg, var(--color-bg-main) 0%, var(--color-bg-secondary) 100%);
 }
