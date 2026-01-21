@@ -19,14 +19,14 @@
 }
 
 .logo-image {
-  height: 5rem;   /* prueba 24px, 28px o 32px */
+  height: 4rem;   /* prueba 24px, 28px o 32px */
   width: auto;
   display: block;
 }
 
 .logo:hover {
   color: var(--color-secondary);
-  transform: scale(1.05);
+  transform: scale(4.05);
 }
 
 .nav-desktop {
@@ -88,4 +88,16 @@
   .header-container {
     padding: 1rem 1.5rem;
   }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 340px;
+  height: auto;
+}
+
+.logo svg {
+  width: 100%;
+  height: 100%;
 }

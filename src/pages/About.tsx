@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import DownloadCV from "../components/DownloadCV";
 import Lottie from "lottie-react";
 import webdesign from "../assets/images/lotties/webdesign.json";
-import design from "../assets/images/lotties/design.json";
+import brand from "../assets/images/lotties/Brand.json";
 import ai from "../assets/images/lotties/ai.json";
 import rating from "../assets/images/lotties/rating.json";
 import teacher from "../assets/images/lotties/teacher.json";
@@ -105,35 +105,36 @@ const About = () => {
             <h2>Áreas de Especialización</h2>
             <div className="skills-grid">
               <div className="skill-card">
-              <div className="about-lottie"> <Lottie animationData={design} loop={true} /> </div>
-                <h3>Diseño Gráfico & Branding</h3>
+              <div className="about-lottie"> <Lottie animationData={brand} loop={true} /> </div>
+                <h3>Branding & <p>Graphic Design</p> </h3>
                 <p>
                   Identidad corporativa, packaging, diseño editorial y dirección
                   de arte
                 </p>
                 <div className="skill-tools">
-                  <span>Photoshop </span>
-                  <span>Illustrator </span>
-                  <span>InDesign </span>
-                  <span>After Effects </span>
-                  <span>Figma </span>
+                  <span>Photoshop |</span>
+                  <span> Illustrator |</span>
+                  <span> InDesign |</span>
+                  <span> After Effects |</span>
+                  <span> Figma </span>
                 </div>
               </div>
 
               <div className="skill-card">
               <div className="about-lottie">
-              <Lottie animationData={webdesign} loop={true} />
-              </div>
+                <Lottie animationData={webdesign}
+                loop={true}
+                /> </div>
                 <h3>Diseño Web & UX/UI</h3>
                 <p>
                   Desarrollo de sitios web responsivos y experiencias digitales
                   centradas en el usuario
                 </p>
                 <div className="skill-tools">
-                  <span>WordPress </span>
-                  <span>HTML5/CSS3 </span>
-                  <span>React </span>
-                  <span>TypeScript</span>
+                  <span>WordPress |</span>
+                  <span> HTML5/CSS3 |</span>
+                  <span> React |</span>
+                  <span> TypeScript</span>
                 </div>
               </div>
 
@@ -145,10 +146,10 @@ const About = () => {
                   producción de contenido visual
                 </p>
                 <div className="skill-tools">
-                  <span>Lightroom </span>
-                  <span>Premiere </span>
-                  <span>iMovie </span>
-                  <span>Camera Raw </span>
+                  <span>Lightroom |</span>
+                  <span> Premiere |</span>
+                  <span> iMovie |</span>
+                  <span> Camera Raw </span>
                 </div>
               </div>
 
@@ -160,11 +161,12 @@ const About = () => {
                   trabajo creativos
                 </p>
                 <div className="skill-tools">
-                  <span>ChatGPT </span>
-                  <span>Midjourney </span>
-                  <span>Adobe Firefly </span>
-                  <span>DALL-E </span>
-                  <span>Runway ML </span>
+                  <span>ChatGPT |</span>
+                  <span> Midjourney |</span>
+                  <span> Adobe Firefly |</span>
+                  <span> DALL-E |</span>
+                  <span> Grok |</span>
+                  <span> NanoBanana</span>
                 </div>
               </div>
 
@@ -172,14 +174,14 @@ const About = () => {
               <div className="about-lottie"> <Lottie animationData={rating} loop={true} /> </div>
                 <h3>Marketing Digital</h3>
                 <p>
-                  Estrategias de contenido visual, campañas en redes sociales y
-                  SEO/SEM
+                Estrategias de contenido visual, campañas en redes sociales y SEO/SEM que generan resultados medibles y crecimiento sostenido.
                 </p>
                 <div className="skill-tools">
-                  <span>Google Ads </span>
-                  <span>Meta Ads </span>
-                  <span>Analytics </span>
-                  <span>Hootsuite </span>
+                  <span>Google Ads |</span>
+                  <span> Meta Ads |</span>
+                  <span> Amazon Ads |</span>
+                  <span> Analytics |</span>
+                  <span> Hootsuite </span>
                 </div>
               </div>
 
@@ -187,14 +189,14 @@ const About = () => {
               <div className="about-lottie"> <Lottie animationData={teacher} loop={true} /> </div>
                 <h3>Profesor de Marketing, Diseño & Tecnología</h3>
                 <p>
-                  Imparto clases integrales que abarcan marketing digital y sus
-                  estrategias, diseño y branding corporativo.
+                Imparto clases en universidades como ESIC University y bootcamps como Upgrade Hub, especializándome en marketing
+                digital estratégico, diseño de branding corporativo y metodologías de crecimiento digital.
                 </p>
                 <div className="skill-tools">
-                  <span>Marketing Digital </span>
-                  <span>Diseño & Branding </span>
-                  <span>Fotografía </span>
-                  <span>Tecnología Web </span>
+                  <span>Marketing Digital |</span>
+                  <span> Diseño & Branding |</span>
+                  <span> Fotografía |</span>
+                  <span> Tecnología Web </span>
                 </div>
               </div>
 
@@ -205,8 +207,12 @@ const About = () => {
                 Redacción creativa, creación de historias de marca y contenidos persuasivos que conectan y venden.
                 </p>
                 <div className="skill-tools">
-                  <span>copywriting </span>
-                  <span>Google Ads </span>
+                  <span>copywriting |</span>
+                  <span> Google Ads |</span>
+                  <span> Amazon Ads |</span>
+                  <span> Hemingway Editor |</span>
+                  <span>  Gramarly</span>
+                  
 
                 </div>
               </div>

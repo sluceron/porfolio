@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import MobileMenu from './MobileMenu'
 import '../styles/Header.css'
+import Lottie from "lottie-react";
+
+import logo from '../assets/images/lotties/logo.json';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -20,11 +23,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo">
-          <img
-            src="/images/logo.png"
-            alt="Santiago Lucerón"
-            className="logo-image"
-          />
+         <Lottie animationData={logo} loop={true} />
         </Link>
 
         <nav className="nav-desktop">

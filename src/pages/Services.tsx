@@ -2,7 +2,7 @@ import { useHistory } from 'react-router-dom'
 import '../styles/Services.css'
 
 const servicesList = [
-  { id: 'Imprenta y Rotulación', title: 'Imprenta y Rotulación', icon: '🖨️', description: 'Creación de todo tipo de material impreso: tarjetas, folletos, carteles, rótulos y soportes visuales para que tu marca se vea profesional en eventos, locales y presentaciones.' },
+  { id: 'Imprenta y Rotulación', title: 'Imprenta y Rotulación', icon: '🖨️', description: 'Creación de todo tipo de material impreso: tarjetas, folletos, carteles, rótulos, ropa personalizada y soportes visuales para que tu marca se vea profesional en eventos, locales y presentaciones.' },
   { id: 'Branding', title: 'Identidad Corporativa', icon: '🎨', description: 'Creación y desarrollo de la identidad visual de tu marca: diseño de logotipo, paleta de colores, tipografías y todo lo necesario para transmitir una imagen sólida, coherente y profesional.' },
   { id: 'Content Creator', title: 'Content Creator Digital', icon: '📸', description: 'Producción de fotos, vídeos y contenido visual pensado para redes sociales, con una estética cuidada y adaptada a lo que tu negocio quiere transmitir.' },
   { id: 'Diseño Web', title: 'Diseño Web y Tecnología', icon: '💻', description: 'Creación de páginas web modernas, rápidas y adaptadas a móviles, que explican claramente lo que haces y ayudan a que tus clientes confíen en ti.' },

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -109,6 +109,7 @@ const projects: Project[] = [
       body: 'Inter Regular (Equilibrio y claridad).',
     },
   },
+
   {
     id: 5,
     title: 'Atelier 91',
@@ -129,10 +130,138 @@ const projects: Project[] = [
       body: 'Lato Light (Sans Serif discreta).',
     },
   },
+{
+    id: 6,
+    title: 'Casa Línea',
+    subtitle: 'Arquitectura & Interiorismo',
+    description: 'Estudio especializado en espacios contemporáneos con alma artesanal y coherencia estética.',
+    image: '/images/gallery/Casa_linea.png',
+    palette: ['#ECEAE2', '#BFB8A5', '#7E7362'],
+    colors: [
+      { name: 'Marfil cálido', hex: '#ECEAE2' },
+      { name: 'Arena natural', hex: '#BFB8A5' },
+      { name: 'Moka suave', hex: '#7E7362' },
+    ],
+    concept: 'Diseñar espacios que hablen un lenguaje natural entre forma, textura y emoción.',
+    mission: 'Crear entornos armónicos que eleven la experiencia del habitar mediante materiales nobles, luz natural y líneas puras.',
+    typography: 'Combinación de elegancia arquitectónica y minimalismo visual.',
+    fonts: {
+      titles: 'Playfair Display (Serif sofisticada).',
+      body: 'Nunito Regular (Sans Serif legible y moderna).',
+    },
+  },
+{
+    id: 7,
+    title: 'Terra Studio',
+    subtitle: 'Diseño Sostenible & Producto',
+    description: 'Un proyecto que explora el diseño consciente, la sostenibilidad y la belleza orgánica.',
+    image: '/images/gallery/TerraStudio.png',
+    palette: ['#DAD3C8', '#9B8F7A', '#4B3F36'],
+    colors: [
+      { name: 'Piedra clara', hex: '#DAD3C8' },
+      { name: 'Café lino', hex: '#9B8F7A' },
+      { name: 'Tierra profunda', hex: '#4B3F36' },
+    ],
+    concept: 'Diseño que respira naturaleza y respeta el ciclo de la materia.',
+    mission: 'Promover un estilo de vida más consciente a través de objetos que equilibran estética, ética y funcionalidad.',
+    typography: 'Natural y serena, con toques orgánicos.',
+    fonts: {
+      titles: 'Cormorant Garamond (Serif con carácter artesanal).',
+      body: 'Open Sans (Sans Serif limpia y práctica).',
+    },
+  },
+{
+    id: 8,
+    title: 'Nébula Films',
+    subtitle: 'Cine & Narrativa Visual',
+    description: 'Productora independiente dedicada a historias visuales con carga emocional y estilo vanguardista.',
+    image: '/images/gallery/NebulaFilms.png',
+    palette: ['#0E0E10', '#43434A', '#C1A57B'],
+    colors: [
+      { name: 'Negro cósmico', hex: '#0E0E10' },
+      { name: 'Gris neblina', hex: '#43434A' },
+      { name: 'Bronce suave', hex: '#C1A57B' },
+    ],
+    concept: 'El arte de narrar con luz, sombra y ritmo visual.',
+    mission: 'Capturar el alma de cada historia a través de una cinematografía que desafía lo convencional.',
+    typography: 'Visual potente y cinematográfica.',
+    fonts: {
+      titles: 'Bebas Neue (Sans Serif geométrica).',
+      body: 'Inter Light (Sans Serif contemporánea).',
+    },
+  },
+{
+    id: 9,
+    title: 'Luz & Forma',
+    subtitle: 'Estudio de Diseño de Iluminación',
+    description: 'Diseñadores de experiencias lumínicas que transforman espacios y emociones.',
+    image: '/images/gallery/LuzyForma.png',
+    palette: ['#F5F1E8', '#C2BBAA', '#856E5F'],
+    colors: [
+      { name: 'Lino claro', hex: '#F5F1E8' },
+      { name: 'Beige humo', hex: '#C2BBAA' },
+      { name: 'Marrón ámbar', hex: '#856E5F' },
+    ],
+    concept: 'Recrear atmósferas mediante el diálogo entre luz, volumen y percepción.',
+    mission: 'Diseñar iluminación arquitectónica que equilibre confort visual y poesía espacial.',
+    typography: 'Precisa, técnica, pero con alma artística.',
+    fonts: {
+      titles: 'Montserrat SemiBold (Sans Serif estructurada).',
+      body: 'IBM Plex Sans (Sans Serif técnica y moderna).',
+    },
+  },
+{
+    id: 10,
+    title: 'Isla Norte',
+    subtitle: 'Moda & Marca Personal',
+    description: 'Un universo de moda consciente inspirado en la pureza del paisaje y el equilibrio interior.',
+    image: '/images/gallery/IslaNorte.png',
+    palette: ['#F4EFEA', '#C9C1B8', '#8B7967'],
+    colors: [
+      { name: 'Perla suave', hex: '#F4EFEA' },
+      { name: 'Ostra gris', hex: '#C9C1B8' },
+      { name: 'Tostado cálido', hex: '#8B7967' },
+    ],
+    concept: 'Minimalismo natural como lenguaje de elegancia y autenticidad.',
+    mission: 'Fomentar una relación más significativa con la ropa a través del diseño ético y los materiales nobles.',
+    typography: 'Fina y contemporánea, con carácter natural.',
+    fonts: {
+      titles: 'Canela Bold (Serif elegante).',
+      body: 'Source Sans Pro (Sans Serif versátil).',
+    },
+  },
+
 ];
   
   const Gallery: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+    useEffect(() => {
+      const handleContextMenu = (e: Event) => {
+        e.preventDefault();
+        alert('No está permitido descargar imágenes.');
+      };
+
+      // Bloquear click derecho en todas las imágenes de slider
+      const slideImages = document.querySelectorAll('.slide-item img');
+      slideImages.forEach(img => img.addEventListener('contextmenu', handleContextMenu));
+
+      // Bloquear click derecho dinámicamente en la imagen del modal
+      const observer = new MutationObserver(() => {
+        const modalImg = document.querySelector('.modal-left img');
+        if (modalImg && !(modalImg as any)._listenerAdded) {
+          modalImg.addEventListener('contextmenu', handleContextMenu);
+          (modalImg as any)._listenerAdded = true;
+        }
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+
+      return () => {
+        slideImages.forEach(img => img.removeEventListener('contextmenu', handleContextMenu));
+        observer.disconnect();
+      };
+    }, []);
   
     const openModal = (project: Project) => {
       setSelectedProject(project);
