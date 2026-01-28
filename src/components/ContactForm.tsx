@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import emailjs from '@emailjs/browser'
 import '../styles/ContactForm.css'
 
@@ -7,6 +8,8 @@ interface ContactFormProps {
 }
 
 const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,7 +19,6 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-
   const [startTime] = useState(Date.now());
   const [userInteracted, setUserInteracted] = useState(false);
 
@@ -35,19 +37,19 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
 
     // Honeypot
     if (data.get("antiBot")) {
-      setError("Acción no permitida.");
+      setError(t('contactForm.error.actionNotAllowed'));
       return;
     }
 
     // Tiempo mínimo
     if (Date.now() - startTime < 1500) {
-      setError("Operación demasiado rápida. ¿Eres humano?");
+      setError(t('contactForm.error.tooFast'));
       return;
     }
 
     // Interacción humana
     if (!userInteracted) {
-      setError("Interactúa con el formulario antes de enviarlo.");
+      setError(t('contactForm.error.noInteraction'));
       return;
     }
 
@@ -56,15 +58,15 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
 
     try {
       await emailjs.send(
-        'service_kc4d5nr',            // Sustituye por el Service ID de EmailJS
-        'template_l8ywbrq',           // Sustituye por el Template ID de EmailJS
+        'service_kc4d5nr',
+        'template_l8ywbrq',
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          servicios: preselectedServices.join(', ') || 'No seleccionado'
+          servicios: preselectedServices.join(', ') || t('contactForm.noService')
         },
-        'mYRhInMQrTkQiSumR'             // Sustituye por tu Public Key (antes USER_ID)
+        'mYRhInMQrTkQiSumR'
       )
       setIsSubmitted(true)
       setTimeout(() => {
@@ -72,7 +74,7 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
         setIsSubmitted(false)
       }, 3000)
     } catch (err) {
-      setError('No se pudo enviar el mensaje. Inténtalo más tarde.')
+      setError(t('contactForm.error.sendFail'))
     } finally {
       setIsLoading(false)
     }
@@ -88,7 +90,7 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
       />
       {preselectedServices.length > 0 && (
         <div className="preselected-services-info">
-          <strong>Servicios seleccionados:</strong>
+          <strong>{t('contactForm.preselected')}:</strong>
           <ul>
             {preselectedServices.map((service, idx) => (
               <li key={idx}>{service}</li>
@@ -96,10 +98,10 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
           </ul>
         </div>
       )}
-      <h2>Envíame un mensaje</h2>
+      <h2>{t('contactForm.title')}</h2>
 
       <div className="form-group">
-        <label htmlFor="name">Nombre</label>
+        <label htmlFor="name">{t('contactForm.name')}</label>
         <input
           type="text"
           id="name"
@@ -108,12 +110,12 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
           onChange={handleChange}
           onFocus={() => setUserInteracted(true)}
           required
-          placeholder="Tu nombre"
+          placeholder={t('contactForm.namePlaceholder')}
         />
       </div>
 
       <div className="form-group">
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">{t('contactForm.email')}</label>
         <input
           type="email"
           id="email"
@@ -122,12 +124,12 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
           onChange={handleChange}
           onFocus={() => setUserInteracted(true)}
           required
-          placeholder="tu@email.com"
+          placeholder={t('contactForm.emailPlaceholder')}
         />
       </div>
 
       <div className="form-group">
-        <label htmlFor="message">Mensaje</label>
+        <label htmlFor="message">{t('contactForm.message')}</label>
         <textarea
           id="message"
           name="message"
@@ -136,25 +138,17 @@ const ContactForm = ({ preselectedServices = [] }: ContactFormProps) => {
           onFocus={() => setUserInteracted(true)}
           required
           rows={6}
-          placeholder="Cuéntame sobre tu proyecto..."
+          placeholder={t('contactForm.messagePlaceholder')}
         />
       </div>
 
       <button type="submit" className="submit-btn" disabled={isSubmitted || isLoading || !userInteracted}>
-        {isLoading ? 'Enviando...' : isSubmitted ? '¡Mensaje Enviado!' : 'Enviar Mensaje'}
+        {isLoading ? t('contactForm.sending') : isSubmitted ? t('contactForm.sent') : t('contactForm.send')}
       </button>
 
-      {error && (
-        <p className="error-message">
-          {error}
-        </p>
-      )}
+      {error && <p className="error-message">{error}</p>}
 
-      {isSubmitted && (
-        <p className="success-message">
-          ¡Gracias por contactarme! Te responderé pronto.
-        </p>
-      )}
+      {isSubmitted && <p className="success-message">{t('contactForm.thankYou')}</p>}
     </form>
   )
 }

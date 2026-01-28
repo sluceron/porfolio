@@ -1,0 +1,210 @@
+{
+    "nav": {
+      "home": "Home",
+      "about": "About me",
+      "gallery": "Gallery",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "home": {
+      "hero": {
+        "title": {
+          "line1": "Crafting",
+          "highlight": "unique digital experiences"
+        },
+        "description": "An immersive and narrative portfolio that tells stories through design and technology",
+        "cta": {
+          "about": "About me",
+          "contact": "Contact"
+        }
+      },
+      "intro": {
+        "title": "Welcome to my creative universe",
+        "description": "Where narrative design meets technological innovation. Every project is a unique story meant to be told in a memorable way."
+      }
+    },
+    "services": {
+      "heroTitle": "Creative Services to Boost Your Brand",
+      "heroSubtitle": "Select a service to request your personalized quote.",
+      "imprenta": {
+        "title": "Printing & Signage",
+        "description": "Creation of all types of printed materials: business cards, brochures, posters, signage, custom clothing, and visual supports to make your brand look professional at events, locations, and presentations."
+      },
+      "branding": {
+        "title": "Corporate Identity",
+        "description": "Creation and development of your brand's visual identity: logo design, color palette, typography, and everything needed to convey a solid, coherent, and professional image."
+      },
+      "contentCreator": {
+        "title": "Digital Content Creator",
+        "description": "Production of photos, videos, and visual content designed for social media, with a refined aesthetic tailored to what your business wants to convey."
+      },
+      "webDesign": {
+        "title": "Web Design & Technology",
+        "description": "Creation of modern, fast, and mobile-friendly websites that clearly explain what you do and help your clients trust you."
+      },
+      "consulting": {
+        "title": "Consulting & Training",
+        "description": "Personalized advice and step-by-step training to help you understand digital marketing, design, and the tools you need to improve your project."
+      },
+      "copywriting": {
+        "title": "Copywriting & Storytelling",
+        "description": "Writing clear, human, and persuasive texts that tell the story of your brand and help clients understand who you are and why to choose you."
+      }
+    },
+    "modal": {
+      "close": "Close project",
+      "concept": "Concept",
+      "mission": "Mission",
+      "palette": "Color Palette",
+      "typography": "Typography",
+      "typographyTitles": "Titles:",
+      "typographyBody": "Body:"
+    },
+    "contact": {
+      "hero": {
+        "title": "Contact",
+        "subtitle": "Do you have a project in mind? Let's talk and create something amazing together."
+         
+      },
+      "info": {
+        "title": "Contact Information",
+        "email": "Email",
+        "whatsapp": "Whatsapp",
+        "social": "Social Networks",
+        "availability": "Availability",
+        "availabilityParagraph1": "Available for freelance projects, collaborations, and temporary or permanent positions.",
+        "availabilityParagraph2": "Fully adaptable to on-site, hybrid, or remote work.",
+        "whatsapp": "Contact me on WhatsApp"
+      }
+    },
+    
+  "about": {
+    "hero": {
+      "title": "About Me",
+      "subtitle": "Graphic designer with over 20 years transforming ideas into impactful visual experiences."
+    },
+    "intro": {
+      "name": "Santiago Lucerón Carrión",
+      "role": "Senior Graphic Designer | Art Director | Corporate Identity Specialist",
+      "location": "📍 Madrid, Spain"
+    },
+    "history": {
+      "title": "My Story",
+      "paragraphs": [
+        "Over two decades dedicated to transforming ideas into impactful visual experiences. My professional career has been marked by a passion for storytelling through design, working with brands in the food, premium beverages, retail, and HORECA sectors.",
+        "I have led creative teams on projects ranging from startups to established companies, developing full corporate identities, 360º campaigns, and visual strategies that emotionally connect with audiences.",
+        "My approach combines strategic creativity with technical mastery, integrating the latest technologies and AI tools in creative processes to optimize results without losing the human essence of design."
+      ]
+    },
+    "experience": {
+      "title": "Highlighted Experience",
+      "timeline": {
+        "0": {
+          "year": "2023 - Present",
+          "role": "Freelance Graphic Designer",
+          "description": "Corporate identity, branding, and web design projects across various sectors"
+        },
+        "1": {
+          "year": "2018 - 2023",
+          "role": "Brand Manager & Creative Director",
+          "description": "Carpers Distilled Beverages - Comprehensive premium brand development"
+        },
+        "2": {
+          "year": "2016 - 2018",
+          "role": "Creative Manager",
+          "description": "Grupo Delgado - Directed 12+ in-house brands in the food sector"
+        },
+        "3": {
+          "year": "2011 - 2015",
+          "role": "Art Director & Marketing Manager",
+          "description": "La Presumida Empresarial - Agency specialized in gastronomy and HORECA"
+        }
+      }
+    },
+    "specialization": {
+      "title": "Areas of Expertise",
+"cards": [
+  { "animationKey": "webdesign", "title": "Web Design", "subtitle": "UX/UI", "description": "Development of responsive websites and user-centered digital experiences", "tools": ["Figma", "WordPress", "React", "HTML5/CSS3", "TypeScript"] },
+  { "animationKey": "brand", "title": "Branding", "description": "Corporate identity, packaging, editorial design, and art direction", "tools": ["Photoshop", "Illustrator", "InDesign", "After Effects", "Figma"] },
+  { "animationKey": "ai", "title": "Artificial Intelligence", "description": "Integration of generative AI tools into creative workflows", "tools": ["ChatGPT", "MidJourney", "Adobe Firefly", "Grok", "NanoBanana"] },
+  { "animationKey": "rating", "title": "Digital Marketing", "description": "Visual content strategies, social media campaigns, and SEO/SEM that deliver measurable results and sustained growth", "tools": ["Google Ads", "Meta Ads", "Amazon Ads", "Analytics"] },
+  { "animationKey": "teacher", "title": "Training", "description": "I teach at universities like ESIC University and bootcamps like Upgrade Hub, specializing in strategic digital marketing, corporate branding design, and digital growth methodologies", "tools": ["Digital Marketing", "Design", "Branding", "Workshops", "Technology"] },
+  { "animationKey": "copy", "title": "Copywriting", "description": "Creative writing, brand story creation, and persuasive content that connects and converts", "tools": ["Copywriting", "Google Ads", "Amazon Ads"] },
+  { "animationKey": "photo", "title": "Photography", "description": "Product and advertising photography, video editing, and visual content production", "tools": ["Lightroom", "Photoshop", "Premiere", "iMovie", "Camera Raw"] }
+]
+    },
+    "brands": {
+      "title": "Brands I Have Worked With",
+      "description": "My work spans branding, visual identity design, merchandising, corporate stationery, graphic design, and communication pieces for brands across sectors, always ensuring consistency between strategy, aesthetics, and brand experience.",
+      "ariaLabel": "Portfolio of client brands"
+    },
+    "cta": {
+      "title": "Shall we work together?",
+      "paragraph": "I am available for graphic design, branding, web development, and creative consulting projects. If you are looking for a professional committed to visual excellence and strategic results, let's talk.",
+      "button": "Send message"
+    }
+  },
+"contactForm": {
+  "preselected": "Selected Services",
+  "title": "Send me a message",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "namePlaceholder": "Your name",
+  "emailPlaceholder": "your@email.com",
+  "messagePlaceholder": "Tell me about your project...",
+  "send": "Send Message",
+  "sending": "Sending...",
+  "sent": "Message Sent!",
+  "thankYou": "Thank you for contacting me! I will get back to you soon.",
+  "noService": "Not selected",
+  "error": {
+    "actionNotAllowed": "Action not allowed.",
+    "tooFast": "Operation too fast. Are you human?",
+    "noInteraction": "Please interact with the form before submitting.",
+    "sendFail": "Could not send the message. Please try again later."
+  }
+},
+  "gallery": {
+    "title": "Project Portfolio",
+    "subtitle": "Here you can see some of my graphic design and branding projects. Click any project to see more details.",
+    "openProject": "Open details of {{project}}",
+    "closeProject": "Close project",
+    "concept": "Concept",
+    "mission": "Mission",
+    "palette": "Color Palette",
+    "typography": "Typography",
+    "titles": "Titles",
+    "body": "Body",
+    "alertRightClick": "Downloading images is not allowed."
+  },
+  "projects": {
+    "nordica": {
+      "title": "Nordica Flora",
+      "subtitle": "Modern Design",
+      "description": "This project showcases modern design with clean lines and vibrant colors.",
+      "concept": "Modern design inspired by Nordic nature, emphasizing freshness and simplicity.",
+      "mission": "Reconnect the urban environment with the serenity of nature through mindful, minimalist, and sustainable landscaping, transforming everyday spaces into sanctuaries of organic life."
+    },
+    "voltaudio": {
+      "title": "Volt Audio",
+      "subtitle": "Technological Minimalism",
+      "description": "Project with minimalist design, subtle animations, and focus on typography.",
+      "concept": "Energy, dynamism, and technology. A high-impact visual identity for the digital world.",
+      "mission": "Provide a clean and efficient digital audio experience through minimalism."
+    },
+    "mesaOrigen": {
+      "title": "Mesa & Origen",
+      "subtitle": "Traditional Gastronomy",
+      "description": "An innovative project integrating advanced technology with user-centered design principles.",
+      "concept": "Honesty, craftsmanship, and warmth. A brand that connects the product's origin with the table.",
+      "mission": "Honor the land and artisanal work, bringing the purity of local products to the table through honest cuisine that celebrates transparency of origin and warmth of gathering."
+    }
+  },
+  "footer": {
+    "servicesTitle": "Creative Services for Individuals and Businesses",
+    "servicesDescription": "Immersive and narrative design 2025",
+    "socialNetworks": "Social Networks",
+    "allRightsReserved": "All rights reserved."
+  }
+}

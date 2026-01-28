@@ -1,15 +1,16 @@
 import { projectsData } from '../data/projectsData'
 import ProjectCard from '../components/ProjectCard'
 import '../styles/Projects.css'
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="projects">
       <section className="projects-hero">
-        <h1>Mis Proyectos</h1>
-        <p className="projects-subtitle">
-          Cada proyecto cuenta una historia única de creatividad e innovación
-        </p>
+        <h1>{t('projects.hero.title')}</h1>
+        <p className="projects-subtitle">{t('projects.hero.subtitle')}</p>
       </section>
 
       <section className="projects-gallery">

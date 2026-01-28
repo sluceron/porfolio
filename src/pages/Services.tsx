@@ -1,17 +1,19 @@
 import { useHistory } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import '../styles/Services.css'
 
 const servicesList = [
-  { id: 'Imprenta y Rotulación', title: 'Imprenta y Rotulación', icon: '🖨️', description: 'Creación de todo tipo de material impreso: tarjetas, folletos, carteles, rótulos, ropa personalizada y soportes visuales para que tu marca se vea profesional en eventos, locales y presentaciones.' },
-  { id: 'Branding', title: 'Identidad Corporativa', icon: '🎨', description: 'Creación y desarrollo de la identidad visual de tu marca: diseño de logotipo, paleta de colores, tipografías y todo lo necesario para transmitir una imagen sólida, coherente y profesional.' },
-  { id: 'Content Creator', title: 'Content Creator Digital', icon: '📸', description: 'Producción de fotos, vídeos y contenido visual pensado para redes sociales, con una estética cuidada y adaptada a lo que tu negocio quiere transmitir.' },
-  { id: 'Diseño Web', title: 'Diseño Web y Tecnología', icon: '💻', description: 'Creación de páginas web modernas, rápidas y adaptadas a móviles, que explican claramente lo que haces y ayudan a que tus clientes confíen en ti.' },
-  { id: 'Consultoría y Formacion', title: 'Consultoría y Formación', icon: '🎓', description: 'Asesoramiento personalizado y formación paso a paso para ayudarte a entender el marketing digital, el diseño y las herramientas que necesitas para mejorar tu proyecto.' },
-  { id: 'Copywriting y Storytelling', title: 'Copywriting y Storytelling', icon: '✍️', description: 'Redacción de textos claros, humanos y persuasivos que cuentan la historia de tu marca y hacen que tus clientes entiendan quién eres y por qué elegirte.' },
+  { id: 'Imprenta y Rotulación', title: { key: 'services.imprenta.title' }, icon: '🖨️', description: { key: 'services.imprenta.description' } },
+  { id: 'Branding', title: { key: 'services.branding.title' }, icon: '🎨', description: { key: 'services.branding.description' } },
+  { id: 'Content Creator', title: { key: 'services.contentCreator.title' }, icon: '📸', description: { key: 'services.contentCreator.description' } },
+  { id: 'Diseño Web', title: { key: 'services.webDesign.title' }, icon: '💻', description: { key: 'services.webDesign.description' } },
+  { id: 'Consultoría y Formacion', title: { key: 'services.consulting.title' }, icon: '🎓', description: { key: 'services.consulting.description' } },
+  { id: 'Copywriting y Storytelling', title: { key: 'services.copywriting.title' }, icon: '✍️', description: { key: 'services.copywriting.description' } },
 ]
 
 const Services = () => {
   const history = useHistory()
+  const { t } = useTranslation()
 
   const handleSelect = (id: string) => {
     history.push(`/contact?services=${encodeURIComponent(id)}`)
@@ -21,8 +23,8 @@ const Services = () => {
 
     <section className="services">
       <section className="services-hero">
-      <h1>Servicios Creativos para Potenciar tu Marca</h1>
-      <p className="contact-subtitle"> Selecciona un servicio para solicitar tu presupuesto personalizado.
+      <h1>{t('services.heroTitle')}</h1>
+      <p className="contact-subtitle"> {t('services.heroSubtitle')}
       </p>
       </section>
       <section className="services-container">
@@ -42,10 +44,10 @@ const Services = () => {
                 <div className="service-icon">
                 {service.icon}
               </div>
-              <h3>{service.title}</h3>
+              <h3>{t(service.title.key)}</h3>
                 </div>
                 <div className="card-back">
-                  <p>{service.description}</p>
+                  <p>{t(service.description.key)}</p>
                 </div>
               </div>
             </div>

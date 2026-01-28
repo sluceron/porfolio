@@ -11,7 +11,21 @@ import teacher from "../assets/images/lotties/teacher.json";
 import copy from "../assets/images/lotties/copy.json";
 import photo from "../assets/images/lotties/photo.json";
 
+import { useTranslation } from "react-i18next";
+
+const lottieMap: Record<string, any> = {
+  webdesign,
+  brand,
+  ai,
+  rating,
+  teacher,
+  copy,
+  photo,
+};
+
 const About = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const track = document.querySelector(".logo-track");
     if (track) {
@@ -19,297 +33,119 @@ const About = () => {
     }
   }, []);
 
+  const experienceTimelineRaw = t('about.experience.timeline', { returnObjects: true });
+  const experienceTimeline = Array.isArray(experienceTimelineRaw)
+    ? experienceTimelineRaw
+    : (experienceTimelineRaw && typeof experienceTimelineRaw === 'object'
+        ? Object.values(experienceTimelineRaw)
+        : []);
+
+  const specializationCardsRaw = t('about.specialization.cards', { returnObjects: true });
+  const specializationCards = Array.isArray(specializationCardsRaw)
+    ? specializationCardsRaw
+    : (specializationCardsRaw && typeof specializationCardsRaw === 'object'
+        ? Object.values(specializationCardsRaw)
+        : []);
+
+  const historyParagraphsRaw = t('about.history.paragraphs', { returnObjects: true });
+  const historyParagraphs = Array.isArray(historyParagraphsRaw)
+    ? historyParagraphsRaw
+    : (historyParagraphsRaw && typeof historyParagraphsRaw === 'object'
+        ? Object.values(historyParagraphsRaw)
+        : []);
+
   return (
     <div className="about">
       <section className="about-hero">
-        <h1>Sobre mí</h1>
-        <p className="about-subtitle">
-          20+ años transformando ideas en experiencias visuales
-        </p>
+        <h1>{t('about.hero.title')}</h1>
+        <p className="about-subtitle">{t('about.hero.subtitle')}</p>
       </section>
 
       <section className="about-content">
         <div className="about-container">
           <div className="about-intro">
-            <h2>Santiago Lucerón Carrión</h2>
-            <p className="role">
-              Diseñador Gráfico Senior | Director de Arte | Especialista en
-              Identidad Corporativa
-            </p>
-            <p className="location">📍 Madrid, España</p>
+            <h2>{t('about.intro.name')}</h2>
+            <p className="role">{t('about.intro.role')}</p>
+            <p className="location">{t('about.intro.location')}</p>
           </div>
 
           <div className="about-text">
-            <h2>Mi Historia</h2>
-            <p>
-              Más de dos décadas dedicadas a transformar ideas en experiencias
-              visuales impactantes. Mi trayectoria profesional ha estado marcada
-              por la pasión por contar historias a través del diseño, trabajando
-              con marcas del sector alimentación, bebidas premium, retail y
-              HORECA.
-            </p>
-            <p>
-              He liderado equipos creativos en proyectos que van desde startups
-              hasta empresas consolidadas, desarrollando{" "}
-              <strong>identidades corporativas completas</strong>,{" "}
-              <strong>campañas 360º</strong> y estrategias visuales que conectan
-              emocionalmente con las audiencias.
-            </p>
-            <p>
-              Mi enfoque combina creatividad estratégica con dominio técnico,
-              integrando las últimas tecnologías y{" "}
-              <strong>herramientas de IA</strong> en procesos creativos para
-              optimizar resultados sin perder la esencia humana del diseño.
-            </p>
+            <h2>{t('about.history.title')}</h2>
+            {historyParagraphs.map((paragraph: string, index: number) => (
+              <p key={index}>{paragraph}</p>
+            ))}
           </div>
 
           <div className="about-experience">
-            <h2>Experiencia Destacada</h2>
+            <h2>{t('about.experience.title')}</h2>
             <div className="experience-timeline">
-              <div className="timeline-item">
-                <span className="year">2023 - Actualidad</span>
-                <h3>Diseñador Gráfico Freelance</h3>
-                <p>
-                  Proyectos de identidad corporativa, branding y diseño web para
-                  diversos sectores
-                </p>
-              </div>
-              <div className="timeline-item">
-                <span className="year">2018 - 2023</span>
-                <h3>Brand Manager & Director Creativo</h3>
-                <p>
-                  Carpers Distilled Beverages - Desarrollo integral de marca
-                  premium
-                </p>
-              </div>
-              <div className="timeline-item">
-                <span className="year">2016 - 2018</span>
-                <h3>Creative Manager</h3>
-                <p>
-                  Grupo Delgado - Dirección de 12+ marcas propias del sector
-                  alimentación
-                </p>
-              </div>
-              <div className="timeline-item">
-                <span className="year">2011 - 2015</span>
-                <h3>Director de Arte & Responsable Marketing</h3>
-                <p>
-                  La Presumida Empresarial - Agencia especializada en
-                  gastronomía y HORECA
-                </p>
-              </div>
+              {experienceTimeline.map((item: any, index: number) => (
+                <div className="timeline-item" key={index}>
+                  <span className="year">{item.year}</span>
+                  <h3>{item.position}</h3>
+                  <p>{item.description}</p>
+                </div>
+              ))}
             </div>
           </div>
 
           <div className="about-skills">
-            <h2>Áreas de Especialización</h2>
+            <h2>{t('about.specialization.title')}</h2>
             <div className="skills-grid">
-              <div className="skill-card">
-              <div className="about-lottie"> <Lottie animationData={brand} loop={true} /> </div>
-                <h3>Branding & <p>Graphic Design</p> </h3>
-                <p>
-                  Identidad corporativa, packaging, diseño editorial y dirección
-                  de arte
-                </p>
-                <div className="skill-tools">
-                  <span>Photoshop |</span>
-                  <span> Illustrator |</span>
-                  <span> InDesign |</span>
-                  <span> After Effects |</span>
-                  <span> Figma </span>
+              {specializationCards.map((card: any, index: number) => (
+                <div className="skill-card" key={index}>
+                  <div className="about-lottie">
+                    {card.animationKey && lottieMap[card.animationKey] && (
+                      <Lottie animationData={lottieMap[card.animationKey]} loop={true} />
+                    )}
+                  </div>
+                  <h3>
+                    {card.title}
+                    {card.subtitle && <p>{card.subtitle}</p>}
+                  </h3>
+                  <p>{card.description}</p>
+                  <div className="skill-tools">
+                    {Array.isArray(card.tools) && card.tools.map((tool: string, i: number) => (
+                      <span key={i}>
+                        {tool}
+                        {i < card.tools.length - 1 ? " | " : ""}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-
-              <div className="skill-card">
-              <div className="about-lottie">
-                <Lottie animationData={webdesign}
-                loop={true}
-                /> </div>
-                <h3>Diseño Web & UX/UI</h3>
-                <p>
-                  Desarrollo de sitios web responsivos y experiencias digitales
-                  centradas en el usuario
-                </p>
-                <div className="skill-tools">
-                  <span>WordPress |</span>
-                  <span> HTML5/CSS3 |</span>
-                  <span> React |</span>
-                  <span> TypeScript</span>
-                </div>
-              </div>
-
-              <div className="skill-card">
-              <div className="about-lottie"> <Lottie animationData={photo} loop={true} /> </div>
-                <h3>Fotografía & Audiovisual</h3>
-                <p>
-                  Fotografía de producto, publicitaria, edición de video y
-                  producción de contenido visual
-                </p>
-                <div className="skill-tools">
-                  <span>Lightroom |</span>
-                  <span> Premiere |</span>
-                  <span> iMovie |</span>
-                  <span> Camera Raw </span>
-                </div>
-              </div>
-
-              <div className="skill-card">
-              <div className="about-lottie"> <Lottie animationData={ai} loop={true} /> </div>
-                <h3>IA & Tecnologías Emergentes</h3>
-                <p>
-                  Integración de herramientas de IA generativa en flujos de
-                  trabajo creativos
-                </p>
-                <div className="skill-tools">
-                  <span>ChatGPT |</span>
-                  <span> Midjourney |</span>
-                  <span> Adobe Firefly |</span>
-                  <span> DALL-E |</span>
-                  <span> Grok |</span>
-                  <span> NanoBanana</span>
-                </div>
-              </div>
-
-              <div className="skill-card">
-              <div className="about-lottie"> <Lottie animationData={rating} loop={true} /> </div>
-                <h3>Marketing Digital</h3>
-                <p>
-                Estrategias de contenido visual, campañas en redes sociales y SEO/SEM que generan resultados medibles y crecimiento sostenido.
-                </p>
-                <div className="skill-tools">
-                  <span>Google Ads |</span>
-                  <span> Meta Ads |</span>
-                  <span> Amazon Ads |</span>
-                  <span> Analytics |</span>
-                  <span> Hootsuite </span>
-                </div>
-              </div>
-
-              <div className="skill-card">
-              <div className="about-lottie"> <Lottie animationData={teacher} loop={true} /> </div>
-                <h3>Profesor de Marketing, Diseño & Tecnología</h3>
-                <p>
-                Imparto clases en universidades como ESIC University y bootcamps como Upgrade Hub, especializándome en marketing
-                digital estratégico, diseño de branding corporativo y metodologías de crecimiento digital.
-                </p>
-                <div className="skill-tools">
-                  <span>Marketing Digital |</span>
-                  <span> Diseño & Branding |</span>
-                  <span> Fotografía |</span>
-                  <span> Tecnología Web </span>
-                </div>
-              </div>
-
-              <div className="skill-card">
-              <div className="about-lottie"> <Lottie animationData={copy} loop={true} /> </div>
-                <h3>Copywriting y Storytelling</h3>
-                <p>
-                Redacción creativa, creación de historias de marca y contenidos persuasivos que conectan y venden.
-                </p>
-                <div className="skill-tools">
-                  <span>copywriting |</span>
-                  <span> Google Ads |</span>
-                  <span> Amazon Ads |</span>
-                  <span> Hemingway Editor |</span>
-                  <span>  Gramarly</span>
-                  
-
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
           <section className="about-brands">
             <div className="about-brands-container">
-              <h2>Marcas con las que he trabajado</h2>
-              <p className="about-brands-text">
-                Mi trabajo abarca proyectos de branding, diseño de identidad
-                visual, merchandising y visual merchandising, papelería
-                corporativa, diseño gráfico y piezas de comunicación para marcas
-                de diferentes sectores, siempre cuidando la coherencia entre
-                estrategia, estética y experiencia de marca.
-              </p>
-
-              <div
-                className="logo-slider"
-                aria-label="Empresas para las que he trabajado"
-              >
+              <h2>{t('about.brands.title')}</h2>
+              <p className="about-brands-text">{t('about.brands.description')}</p>
+              <div className="logo-slider" aria-label={t('about.brands.ariaLabel')}>
                 <div className="logo-track">
-                  <img
-                    src="https://www.shutterstock.com/image-photo/coca-cola-logo-on-vibrant-600nw-2524254995.jpg"
-                    alt="Coca-Cola"
-                  />
-                  <img
-                    src="https://guiaimpresion.com/wp-content/uploads/2020/05/Heineken-emblema.jpg"
-                    alt="Heineken Internacional"
-                  />
-                  <img
-                    src="https://images.seeklogo.com/logo-png/43/1/damm-logo-png_seeklogo-438928.png"
-                    alt="Grupo Damm"
-                  />
-                  <img
-                    src="https://www.compromisorse.com/upload/noticias/011/11397/Mahou.png"
-                    alt="Mahou San Miguel"
-                  />
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Pernod_Ricard_logo_2019.svg"
-                    alt="Pernod Ricard"
-                  />
-                  <img
-                    src="https://images.seeklogo.com/logo-png/8/1/maxxium-logo-png_seeklogo-89659.png"
-                    alt="Maxxium"
-                  />
-
-                  <img
-                    src="https://clinicadentalbances.com/wp-content/uploads/2025/06/seguro-dental-asisa-en-santa-cruz-de-tenerife.jpg"
-                    alt="Asisa"
-                  />
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Integrated_Service_Solutions_%28logo%29.svg"
-                    alt="ISS"
-                  />
-
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Altadis_web.png"
-                    alt="Altadis"
-                  />
-                  <img
-                    src="https://www.underconsideration.com/brandnew/archives/british_american_tobacco_logo_before_after.png"
-                    alt="British American Tobacco"
-                  />
-
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Nintendo.svg"
-                    alt="Nintendo"
-                  />
-                  <img
-                    src="https://objectway.com/wp-content/uploads/2023/07/logo_BNP_paribas.svg"
-                    alt="BNP Paribas"
-                  />
-                  <img
-                    src="https://www.brandemia.org/wp-content/uploads/2012/06/version_horizontal.jpg"
-                    alt="Repsol"
-                  />
+                  <img src="https://www.shutterstock.com/image-photo/coca-cola-logo-on-vibrant-600nw-2524254995.jpg" alt="Coca-Cola" />
+                  <img src="https://guiaimpresion.com/wp-content/uploads/2020/05/Heineken-emblema.jpg" alt="Heineken Internacional" />
+                  <img src="https://images.seeklogo.com/logo-png/43/1/damm-logo-png_seeklogo-438928.png" alt="Grupo Damm" />
+                  <img src="https://www.compromisorse.com/upload/noticias/011/11397/Mahou.png" alt="Mahou San Miguel" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Pernod_Ricard_logo_2019.svg" alt="Pernod Ricard" />
+                  <img src="https://images.seeklogo.com/logo-png/8/1/maxxium-logo-png_seeklogo-89659.png" alt="Maxxium" />
+                  <img src="https://clinicadentalbances.com/wp-content/uploads/2025/06/seguro-dental-asisa-en-santa-cruz-de-tenerife.jpg" alt="Asisa" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Integrated_Service_Solutions_%28logo%29.svg" alt="ISS" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Altadis_web.png" alt="Altadis" />
+                  <img src="https://www.underconsideration.com/brandnew/archives/british_american_tobacco_logo_before_after.png" alt="British American Tobacco" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Nintendo.svg" alt="Nintendo" />
+                  <img src="https://objectway.com/wp-content/uploads/2023/07/logo_BNP_paribas.svg" alt="BNP Paribas" />
+                  <img src="https://www.brandemia.org/wp-content/uploads/2012/06/version_horizontal.jpg" alt="Repsol" />
                 </div>
               </div>
             </div>
           </section>
 
           <div className="about-cta">
-            <h2>¿Trabajamos juntos?</h2>
-            <p>
-              Estoy disponible para proyectos de diseño gráfico, branding,
-              desarrollo web y consultoría creativa. Si buscas un profesional
-              comprometido con la excelencia visual y resultados estratégicos,
-              hablemos.
-            </p>
+            <h2>{t('about.cta.title')}</h2>
+            <p>{t('about.cta.paragraph')}</p>
             <div className="cta-buttons">
-              <Link
-                to="/contact"
-                className="btn-primary"
-              >
-                Enviar mensaje
-              </Link>
+              <Link to="/contact" className="btn-primary">{t('about.cta.button')}</Link>
               <DownloadCV className="btn-secondary" />
             </div>
           </div>

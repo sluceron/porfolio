@@ -18,6 +18,33 @@
   align-items: center;
 }
 
+.language-switcher {
+  display: flex;
+  gap: 0.9rem;
+  position: relative; /* evita que quede fuera del flujo */
+  z-index: 100;
+
+}
+.language-switcher button {
+  padding: 0.1rem 0.4rem;
+  font-size: 0.8rem;
+  color: #FFD700;
+  background: #554A99;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.language-switcher button:hover {
+  color: #17b29e; /* un amarillo más claro al pasar el mouse */
+  
+}
+
+.language-switcher button.active {
+  background: #FFD700 !important;
+}
+
 .logo-image {
   height: 4rem;   /* prueba 24px, 28px o 32px */
   width: auto;

@@ -1,20 +1,22 @@
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import '../styles/Footer.css'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const { t } = useTranslation()
 
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Servicios Creativos para particulares y empresas</h3>
-            <p>Diseño inmersivo y narrativo 2025</p>
+            <h3>{t('footer.servicesTitle')}</h3>
+            <p>{t('footer.servicesDescription')}</p>
           </div>
 
           <div className="footer-section">
-            <h4>Redes Sociales</h4>
+            <h4>{t('footer.socialNetworks')}</h4>
             <div className="social-links">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin /> LinkedIn
@@ -27,7 +29,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Santiago Lucerón. Todos los derechos reservados.</p>
+          <p>&copy; {currentYear} Santiago Lucerón. {t('footer.allRightsReserved')}</p>
         </div>
       </div>
     </footer>

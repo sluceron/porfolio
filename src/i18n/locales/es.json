@@ -1,0 +1,201 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "gallery": "Galería",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "home": {
+    "hero": {
+      "title": {
+        "line1": "Creando experiencias",
+        "highlight": "digitales únicas"
+      },
+      "description": "Portfolio inmersivo y narrativo que cuenta historias a través del diseño y la tecnología",
+      "cta": {
+        "about": "Sobre mí",
+        "contact": "Contactar"
+      }
+    },
+    "intro": {
+      "title": "Bienvenido a mi universo creativo",
+      "description": "Donde el diseño narrativo se encuentra con la innovación tecnológica. Cada proyecto es una historia única que merece ser contada de forma memorable."
+    }
+  },
+  "services": {
+    "heroTitle": "Servicios Creativos para Potenciar tu Marca",
+    "heroSubtitle": "Selecciona un servicio para solicitar tu presupuesto personalizado.",
+    "imprenta": {
+      "title": "Imprenta y Rotulación",
+      "description": "Creación de todo tipo de material impreso: tarjetas, folletos, carteles, rótulos, ropa personalizada y soportes visuales para que tu marca se vea profesional en eventos, locales y presentaciones."
+    },
+    "branding": {
+      "title": "Identidad Corporativa",
+      "description": "Creación y desarrollo de la identidad visual de tu marca: diseño de logotipo, paleta de colores, tipografías y todo lo necesario para transmitir una imagen sólida, coherente y profesional."
+    },
+    "contentCreator": {
+      "title": "Content Creator Digital",
+      "description": "Producción de fotos, vídeos y contenido visual pensado para redes sociales, con una estética cuidada y adaptada a lo que tu negocio quiere transmitir."
+    },
+    "webDesign": {
+      "title": "Diseño Web y Tecnología",
+      "description": "Creación de páginas web modernas, rápidas y adaptadas a móviles, que explican claramente lo que haces y ayudan a que tus clientes confíen en ti."
+    },
+    "consulting": {
+      "title": "Consultoría y Formación",
+      "description": "Asesoramiento personalizado y formación paso a paso para ayudarte a entender el marketing digital, el diseño y las herramientas que necesitas para mejorar tu proyecto."
+    },
+    "copywriting": {
+      "title": "Copywriting y Storytelling",
+      "description": "Redacción de textos claros, humanos y persuasivos que cuentan la historia de tu marca y hacen que tus clientes entiendan quién eres y por qué elegirte."
+    }
+  },
+
+  "contact": {
+    "hero": {
+      "title": "Contacto",
+      "subtitle": "¿Tienes un proyecto en mente? Hablemos y hagamos algo increíble juntos."
+       
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "email": "Email",
+      "whatsapp": "Whatsapp",
+      "social": "Redes Sociales",
+      "availability": "Disponibilidad",
+      "availabilityParagraph1": "Disponible para proyectos freelance, colaboraciones y puestos temporales o indefinidos.",
+      "availabilityParagraph2": "Adaptabilidad total a trabajo presencial, híbrido o remoto.",
+      "whatsapp": "Escribeme por WhatsApp"
+     
+    }
+  },
+
+    "about": {
+      "hero": {
+        "title": "Sobre mí",
+        "subtitle": "Desarrollador web apasionado y creativo"
+      },
+      "intro": {
+        "name": "Santiago Lucerón",
+        "role": "Desarrollador Frontend",
+        "location": "Santa Cruz de Tenerife, España"
+      },
+      "history": {
+        "title": "Mi historia",
+        "paragraphs": [
+          "Más de dos décadas dedicadas a transformar ideas en experiencias visuales impactantes.", "Mi trayectoria profesional ha estado marcada por la pasión por contar historias a través del diseño, trabajando con marcas del sector alimentación, bebidas premium, retail y HORECA.", "He liderado equipos creativos en proyectos que van desde startups hasta empresas consolidadas, desarrollando identidades corporativas completas, campañas 360º y estrategias visuales que conectan emocionalmente con las audiencias. Mi enfoque combina creatividad estratégica con dominio técnico, integrando las últimas tecnologías y herramientas de IA en procesos creativos para optimizar resultados sin perder la esencia humana del diseño."
+        ]
+      },
+      "experience": {
+        "title": "Experiencia",
+        "timeline": {
+          "0": {
+            "year": "2023 - actualidad",
+            "position": "Diseñador Gráfico Freelance",
+            "description": "Proyectos de identidad corporativa, branding y diseño web para diversos sectores."
+          },
+          "1": {
+            "year": "2018 - 2023",
+            "position": "Brand Manager & Director Creativo",
+            "description": "Me uní a una agencia digital, desarrollando interfaces modernas y responsivas."
+          },
+          "2": {
+            "year": "2016 - 2018",
+            "position": "Creative Manager & Director de arte",
+            "description": "Grupo Delgado - Dirección de 12+ marcas propias del sector alimentación."
+          },
+          "3": {
+            "year": "2011 - 2015",
+            "position": "Director de Arte & Responsable Marketing",
+            "description": "La Presumida Empresarial - Agencia especializada en gastronomía y HORECA."
+          }
+        }
+      },
+      "specialization": {
+        "title": "Especialización",
+        "cards": [
+          { "animationKey": "webdesign", "title": "Diseño Web", "subtitle": "UX/UI", "description": "Desarrollo de sitios web responsivos y experiencias digitales centradas en el usuario", "tools": ["Figma", "WordPress", "React", "HTML5/CSS3", "TypeScript"] },
+          { "animationKey": "brand", "title": "Branding", "description": "Identidad corporativa, packaging, diseño editorial y dirección de arte", "tools": ["Photoshop", "Illustrator", "InDesign", "After Effects", "Figma"] },
+          { "animationKey": "ai", "title": "Inteligencia Artificial", "description": "Integración de herramientas de IA generativa en flujos de trabajo creativos", "tools": ["ChatGPT", "MidJourney", "Adobe Firefly", "Grok", "NanoBanana"] },
+          { "animationKey": "rating", "title": "Marketing Digital", "description": "Estrategias de contenido visual, campañas en redes sociales y SEO/SEM que generan resultados medibles y crecimiento sostenido.", "tools": ["Google Ads", "Meta Ads", "Amazon Ads", "Analytics"] },
+          { "animationKey": "teacher", "title": "Formación", "description": "Imparto clases en universidades como ESIC University y bootcamps como Upgrade Hub, especializándome en marketing digital estratégico, diseño de branding corporativo y metodologías de crecimiento digital.", "tools": ["Marketing Digital", "Diseño", "Branding", "Workshops", "Tecnología"] },
+          { "animationKey": "copy", "title": "Copywriting", "description": "Redacción creativa, creación de historias de marca y contenidos persuasivos que conectan y venden.", "tools": ["Copywriting", "Google Ads", "Amazon Ads"] },
+          { "animationKey": "photo", "title": "Fotografía", "description": "Fotografía de producto, publicitaria, edición de video y producción de contenido visual", "tools": ["Lightroom", "Photoshop", "Premier", "iMovie", "Camera Raw"] }
+        ]
+      },
+      "brands": {
+        "title": "Marcas con las que he trabajado",
+        "description": "He colaborado con diversas marcas reconocidas a nivel internacional.",
+        "ariaLabel": "Carrusel de logos de marcas"
+      },
+      "cta": {
+        "title": "¿Quieres trabajar conmigo?",
+        "paragraph": "Estoy disponible para nuevos proyectos y colaboraciones.",
+        "button": "Contáctame"
+      }
+    },
+  "contactForm": {
+  "preselected": "Servicios seleccionados",
+  "title": "Envíame un mensaje",
+  "name": "Nombre",
+  "email": "Email",
+  "message": "Mensaje",
+  "namePlaceholder": "Tu nombre",
+  "emailPlaceholder": "tu@email.com",
+  "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+  "send": "Enviar Mensaje",
+  "sending": "Enviando...",
+  "sent": "¡Mensaje Enviado!",
+  "thankYou": "¡Gracias por contactarme! Te responderé pronto.",
+  "noService": "No seleccionado",
+  "error": {
+    "actionNotAllowed": "Acción no permitida.",
+    "tooFast": "Operación demasiado rápida. ¿Eres humano?",
+    "noInteraction": "Interactúa con el formulario antes de enviarlo.",
+    "sendFail": "No se pudo enviar el mensaje. Inténtalo más tarde."
+  }
+},
+  "gallery": {
+    "title": "Portfolio de Proyectos",
+    "subtitle": "Aquí puedes ver algunos de mis proyectos de diseño gráfico y branding. Haz clic en cualquier proyecto para ver más detalles.",
+    "openProject": "Abrir detalles de {{project}}",
+    "closeProject": "Cerrar proyecto",
+    "concept": "Concepto",
+    "mission": "Misión",
+    "palette": "Paleta de colores",
+    "typography": "Tipografía",
+    "titles": "Títulos",
+    "body": "Cuerpo",
+    "alertRightClick": "No está permitido descargar imágenes."
+  },
+  "projects": {
+    "nordica": {
+      "title": "Nórdica Flora",
+      "subtitle": "Diseño Moderno",
+      "description": "Este proyecto muestra un diseño moderno con líneas limpias y colores vibrantes.",
+      "concept": "Diseño moderno inspirado en la naturaleza nórdica, con énfasis en la frescura y simplicidad.",
+      "mission": "Reconectar el entorno urbano con la serenidad de la naturaleza a través de un paisajismo consciente, minimalista y sostenible, transformando espacios cotidianos en santuarios de vida orgánica."
+    },
+    "voltaudio": {
+      "title": "Volt Audio",
+      "subtitle": "Minimalismo Tecnológico",
+      "description": "Proyecto con un diseño minimalista, animaciones sutiles y enfoque en la tipografía.",
+      "concept": "Energía, dinamismo y tecnología. Una identidad visual de alto impacto para el mundo digital.",
+      "mission": "Ofrecer una experiencia de audio digital limpia y eficiente mediante el minimalismo."
+    },
+    "mesaOrigen": {
+      "title": "Mesa & Origen",
+      "subtitle": "Gastronomía Tradicional",
+      "description": "Un proyecto innovador que integra tecnología avanzada con principios de diseño centrados en el usuario.",
+      "concept": "Honestidad, artesanía y calidez. Una marca que conecta el origen del producto con la mesa.",
+      "mission": "Honrar la tierra y el trabajo artesanal, llevando a la mesa la pureza del producto local mediante una cocina honesta que celebra la transparencia del origen y la calidez del encuentro."
+    }
+  },
+  "footer": {
+    "servicesTitle": "Servicios Creativos para particulares y empresas",
+    "servicesDescription": "Diseño inmersivo y narrativo 2025",
+    "socialNetworks": "Redes Sociales",
+    "allRightsReserved": "Todos los derechos reservados."
+  }
+}
