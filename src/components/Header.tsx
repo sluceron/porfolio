@@ -41,20 +41,22 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="language-switcher">
-          <button 
-            onClick={() => i18n.changeLanguage('es')}
-            style={{ fontWeight: i18n.language === 'es' ? 'bold' : 'normal' }}
-          >
-            🇪🇸 ESPAÑOL
-          </button>
-          <button 
-            onClick={() => i18n.changeLanguage('en')}
-            style={{ fontWeight: i18n.language === 'en' ? 'bold' : 'normal' }}
-          >
-            🇬🇧 ENGLISH
-          </button>
-        </div>
+        {!isMenuOpen && (
+          <div className="language-switcher">
+            <button 
+              onClick={() => i18n.changeLanguage('es')}
+              style={{ fontWeight: i18n.language === 'es' ? 'bold' : 'normal' }}
+            >
+              🇪🇸 ES
+            </button>
+            <button 
+              onClick={() => i18n.changeLanguage('en')}
+              style={{ fontWeight: i18n.language === 'en' ? 'bold' : 'normal' }}
+            >
+              🇬🇧 EN
+            </button>
+          </div>
+        )}
 
         <button 
           className="menu-toggle"

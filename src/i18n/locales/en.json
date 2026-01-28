@@ -69,7 +69,6 @@
       "info": {
         "title": "Contact Information",
         "email": "Email",
-        "whatsapp": "Whatsapp",
         "social": "Social Networks",
         "availability": "Availability",
         "availabilityParagraph1": "Available for freelance projects, collaborations, and temporary or permanent positions.",
@@ -178,29 +177,64 @@
     "body": "Body",
     "alertRightClick": "Downloading images is not allowed."
   },
-  "projects": {
+"projects": {
     "nordica": {
-      "title": "Nordica Flora",
+      "title": "Nordic Flora",
       "subtitle": "Modern Design",
-      "description": "This project showcases modern design with clean lines and vibrant colors.",
+      "description": "This project showcases a modern design with clean lines and vibrant colors.",
       "concept": "Modern design inspired by Nordic nature, emphasizing freshness and simplicity.",
-      "mission": "Reconnect the urban environment with the serenity of nature through mindful, minimalist, and sustainable landscaping, transforming everyday spaces into sanctuaries of organic life."
+      "mission": "Reconnect the urban environment with the serenity of nature through conscious, minimalist, and sustainable landscaping, transforming everyday spaces into sanctuaries of organic life."
     },
     "voltaudio": {
       "title": "Volt Audio",
       "subtitle": "Technological Minimalism",
-      "description": "Project with minimalist design, subtle animations, and focus on typography.",
+      "description": "A project with minimalist design, subtle animations, and a focus on typography.",
       "concept": "Energy, dynamism, and technology. A high-impact visual identity for the digital world.",
       "mission": "Provide a clean and efficient digital audio experience through minimalism."
     },
     "mesaOrigen": {
       "title": "Mesa & Origen",
       "subtitle": "Traditional Gastronomy",
-      "description": "An innovative project integrating advanced technology with user-centered design principles.",
-      "concept": "Honesty, craftsmanship, and warmth. A brand that connects the product's origin with the table.",
-      "mission": "Honor the land and artisanal work, bringing the purity of local products to the table through honest cuisine that celebrates transparency of origin and warmth of gathering."
+      "description": "An innovative project that integrates advanced technology with user-centered design principles.",
+      "concept": "Honesty, craftsmanship, and warmth. A brand that connects the origin of the product with the table.",
+      "mission": "Honor the land and artisanal work, bringing the purity of local products to the table through honest cuisine that celebrates transparency of origin and the warmth of gathering."
+    },
+    "lumina": {
+      "title": "Lumina SaaS",
+      "subtitle": "Data Analytics",
+      "description": "A data analytics platform with clean and effective visualizations.",
+      "concept": "Clarity, intelligence, and efficiency. Designed to visualize complex data in a simple way.",
+      "mission": "Simplify data interpretation for strategic decision-making."
+    },
+    "terra": {
+      "title": "Terra Studio",
+      "subtitle": "Sustainable Design & Product",
+      "description": "A project exploring conscious design, sustainability, and organic beauty.",
+      "concept": "Design that breathes nature and respects the cycle of matter.",
+      "mission": "Promote a more conscious lifestyle through objects that balance aesthetics, ethics, and functionality."
+    },
+    "Nébula": {
+      "title": "Nébula Films",
+      "subtitle": "Cinema & Visual Storytelling",
+      "description": "An independent production company dedicated to emotionally charged visual stories with an avant-garde style.",
+      "concept": "The art of storytelling through light, shadow, and visual rhythm.",
+      "mission": "Capture the soul of each story through cinematography that challenges convention."
+    },
+    "luz": {
+      "title": "Light & Form",
+      "subtitle": "Lighting Design Studio",
+      "description": "Designers of luminous experiences that transform spaces and emotions.",
+      "concept": "Recreate atmospheres through the dialogue between light, volume, and perception.",
+      "mission": "Design architectural lighting that balances visual comfort and spatial poetry."
+    },
+    "isla": {
+      "title": "Isla Norte",
+      "subtitle": "Fashion & Personal Branding",
+      "description": "A conscious fashion universe inspired by the purity of the landscape and inner balance.",
+      "concept": "Natural minimalism as a language of elegance and authenticity.",
+      "mission": "Foster a more meaningful relationship with clothing through ethical design and noble materials."
     }
-  },
+},
   "footer": {
     "servicesTitle": "Creative Services for Individuals and Businesses",
     "servicesDescription": "Immersive and narrative design 2025",

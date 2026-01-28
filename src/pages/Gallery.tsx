@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '../styles/Gallery.css'
 import { useTranslation } from 'react-i18next'
+import { id } from 'date-fns/locale'
 
 interface Color {
   name: string;
@@ -90,8 +91,108 @@ const projects: Project[] = [
       body: 'Arvo o Rockwell (Slab Serif robusta).',
     },
   },
-  // ... agrega los proyectos 4-10 siguiendo el mismo patrón
-];
+  {
+    id: 4,
+    titleKey: 'projects.atelier91.title',
+    subtitleKey: 'projects.atelier91.subtitle',
+    descriptionKey: 'projects.atelier91.description',
+    image: '/images/gallery/Atelier91.png',
+    palette: ['#E7D8C9', '#B2B2B2', '#C5A059'],
+    colors: [
+      { name: 'Champán', hex: '#E7D8C9' },
+      { name: 'Gris Piedra', hex: '#B2B2B2' },
+      { name: 'Dorado Mate', hex: '#C5A059' },
+    ],
+    conceptKey: 'projects.atelier91.concept',
+    missionKey: 'projects.atelier91.mission',
+    typography: 'Tipografía serif clásica para títulos y sans-serif moderna para textos.',
+    fonts: {
+      titles: 'Bodoni Seven o Didot (Serif de alto contraste).',
+      body: 'Lato Light (Sans Serif discreta).',
+    },
+  },
+  {
+    id: 5,
+    titleKey: 'projects.terra.title',
+    subtitleKey: 'projects.terra.subtitle',
+    descriptionKey: 'projects.terra.description',
+    image: '/images/gallery/TerraStudio.png',
+    palette: ['#E7D8C9', '#B2B2B2', '#C5A059'],
+    colors: [
+      { name: 'Piedra clara', hex: '#DAD3C8' },
+      { name: 'Café lino', hex: '#9B8F7A' },
+      { name: 'Tierra profunda', hex: '#4B3F36' },
+    ],
+    conceptKey: 'projects.terra.concept',
+    missionKey: 'projects.terra.mission',
+    typography: 'Natural y serena, con toques orgánicos.',
+    fonts: {
+      titles: 'Cormorant Garamond (Serif con carácter artesanal).',
+      body: 'Open Sans (Sans Serif limpia y práctica).',
+    },
+  },
+  {
+    id: 6,
+    titleKey: 'projects.nebula.title',
+    subtitleKey: 'projects.nebula.subtitle',
+    descriptionKey: 'projects.nebula.description',
+    image: '/images/gallery/NebulaFilms.png',
+    palette: ['#0E0E10', '#43434A', '#C1A57B'],
+    colors: [
+      { name: 'Negro cósmico', hex: '#0E0E10' },
+      { name: 'Gris neblina', hex: '#43434A' },
+      { name: 'Bronce suave', hex: '#C1A57B' },
+    ],
+    conceptKey: 'projects.nebula.concept',
+    missionKey: 'projects.nebula.mission',
+    typography: 'Visual potente y cinematográfica.',
+    fonts: {
+      titles: 'Bebas Neue (Sans Serif geométrica).',
+      body: 'Inter Light (Sans Serif contemporánea).',
+    },
+  },
+  {
+    id: 7,
+    titleKey: 'projects.luz.title',
+    subtitleKey: 'projects.luz.subtitle',
+    descriptionKey: 'projects.luz.description',
+    image: '/images/gallery/LuzyForma.png',
+    palette: ['#F5F1E8', '#C2BBAA', '#856E5F'],
+    colors: [
+      { name: 'Lino claro', hex: '#F5F1E8' },
+      { name: 'Beige humo', hex: '#C2BBAA' },
+      { name: 'Marrón ámbar', hex: '#856E5F' },
+    ],
+    conceptKey: 'projects.nebula.concept',
+    missionKey: 'projects.nebula.mission',
+    typography: 'Precisa, técnica, pero con alma artística.',
+    fonts: {
+      titles: 'Montserrat SemiBold (Sans Serif estructurada).',
+      body: 'IBM Plex Sans (Sans Serif técnica y moderna).',
+    },
+  },
+  {
+    id: 8,
+    titleKey: 'projects.isla.title',
+    subtitleKey: 'projects.isla.subtitle',
+    descriptionKey: 'projects.isla.description',
+    image: '/images/gallery/IslaNorte.png',
+    palette: ['#F4EFEA', '#C9C1B8', '#8B7967'],
+    colors: [
+      { name: 'Perla suave', hex: '#F4EFEA' },
+      { name: 'Ostra gris', hex: '#C9C1B8' },   
+      { name: 'Tostado cálido', hex: '#8B7967' },
+    ],
+    conceptKey: 'projects.isla.concept',
+    missionKey: 'projects.isla.mission',
+    typography: 'Fina y contemporánea, con carácter natural.',
+    fonts: {
+      titles: 'Canela Bold (Serif elegante).',
+      body: 'Source Sans Pro (Sans Serif versátil).',
+    },
+  },
+    
+]
 
 const Gallery: React.FC = () => {
   const { t } = useTranslation();
@@ -124,7 +225,7 @@ const Gallery: React.FC = () => {
 
   const openModal = (project: Project) => {
     setSelectedProject(project);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = window.innerWidth >= 600 ? 'hidden' : 'auto';
   };
 
   const closeModal = () => {
@@ -139,13 +240,14 @@ const Gallery: React.FC = () => {
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
+    speed: 200,
+    slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 600, settings: { slidesToShow: 1 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2, arrows: true } },
+      { breakpoint: 768, settings: { slidesToShow: 2, arrows: false, centerMode: false, vertical: true } },
+      { breakpoint: 480, settings: { slidesToShow: 2, arrows: false, centerMode: true, vertical: true } },
     ]
   };
 
@@ -156,7 +258,11 @@ const Gallery: React.FC = () => {
         <p className="gallery-subtitle">{t('gallery.subtitle')}</p>
       </section>
 
-      <Slider {...sliderSettings} className="gallery-slider">
+      <Slider
+        {...sliderSettings}
+        className={`gallery-slider`}
+        vertical={window.innerWidth <= 768}
+      >
         {projects.map(project => (
           <div
             key={project.id}
@@ -166,21 +272,11 @@ const Gallery: React.FC = () => {
             aria-label={t('gallery.openProject', { project: t(project.titleKey) })}
             onClick={() => openModal(project)}
             onKeyDown={e => e.key === 'Enter' && openModal(project)}
-            style={{ position: 'relative', cursor: 'pointer' }}
           >
             <img src={project.image} alt={t(project.titleKey)} loading="lazy" />
-            <div className="slide-caption" style={{
-              position: 'absolute',
-              bottom: '10px',
-              left: '10px',
-              color: 'white',
-              backgroundColor: 'rgba(0,0,0,0.5)',
-              padding: '10px',
-              borderRadius: '5px',
-              maxWidth: '90%'
-            }}>
-              <h2 style={{ margin: 0 }}>{t(project.titleKey)}</h2>
-              <h4 style={{ margin: 0 }}>{t(project.subtitleKey)}</h4>
+            <div className="slide-caption">
+              <h2>{t(project.titleKey)}</h2>
+              <h4>{t(project.subtitleKey)}</h4>
             </div>
           </div>
         ))}

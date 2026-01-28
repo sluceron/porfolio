@@ -29,13 +29,13 @@ const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
               onClick={() => i18n.changeLanguage('es')}
               style={{ fontWeight: i18n.language === 'es' ? 'bold' : 'normal' }}
             >
-              ES
+              🇪🇸 ES
             </button>
             <button 
               onClick={() => i18n.changeLanguage('en')}
               style={{ fontWeight: i18n.language === 'en' ? 'bold' : 'normal' }}
             >
-              EN
+              🇬🇧 EN
             </button>
           </div>
 

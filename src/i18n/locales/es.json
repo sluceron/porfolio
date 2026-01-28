@@ -61,7 +61,6 @@
     "info": {
       "title": "Información de Contacto",
       "email": "Email",
-      "whatsapp": "Whatsapp",
       "social": "Redes Sociales",
       "availability": "Disponibilidad",
       "availabilityParagraph1": "Disponible para proyectos freelance, colaboraciones y puestos temporales o indefinidos.",
@@ -190,8 +189,44 @@
       "description": "Un proyecto innovador que integra tecnología avanzada con principios de diseño centrados en el usuario.",
       "concept": "Honestidad, artesanía y calidez. Una marca que conecta el origen del producto con la mesa.",
       "mission": "Honrar la tierra y el trabajo artesanal, llevando a la mesa la pureza del producto local mediante una cocina honesta que celebra la transparencia del origen y la calidez del encuentro."
+    },
+    "lumina": {
+      "title": "Lumina SaaS",
+      "subtitle": "Análisis de Datos",
+      "description": "Plataforma de análisis de datos con visualizaciones limpias y efectivas.",
+      "concept": "Claridad, inteligencia y eficiencia. Diseñada para la visualización compleja de datos de forma simple.",
+      "mission": "Simplificar la interpretación de datos para la toma de decisiones estratégicas."
+    },
+    "terra": {
+      "title": "Terra Studio",
+      "subtitle": "Diseño Sostenible & Producto",
+      "description": "Un proyecto que explora el diseño consciente, la sostenibilidad y la belleza orgánica.",
+      "concept": "Diseño que respira naturaleza y respeta el ciclo de la materia.",
+      "mission": "Promover un estilo de vida más consciente a través de objetos que equilibran estética, ética y funcionalidad."
+    },
+    "Nébula": {
+      "title": "Nébula Films",
+      "subtitle": "Cine & Narrativa Visual",
+      "description": "Productora independiente dedicada a historias visuales con carga emocional y estilo vanguardista.",
+      "concept": "El arte de narrar con luz, sombra y ritmo visual.",
+      "mission": "Capturar el alma de cada historia a través de una cinematografía que desafía lo convencional."
+    },
+    "luz": {
+      "title": "Luz & Forma",
+      "subtitle": "Estudio de Diseño de Iluminación",
+      "description": "Diseñadores de experiencias lumínicas que transforman espacios y emociones.",
+      "concept": "Recrear atmósferas mediante el diálogo entre luz, volumen y percepción.",
+      "mission": "Diseñar iluminación arquitectónica que equilibre confort visual y poesía espacial."
+    },
+    "isla": {
+      "title": "Isla Norte",
+      "subtitle": "Moda & Marca Personal",
+      "description": "Un universo de moda consciente inspirado en la pureza del paisaje y el equilibrio interior.",
+      "concept": "Minimalismo natural como lenguaje de elegancia y autenticidad.",
+      "mission": "Fomentar una relación más significativa con la ropa a través del diseño ético y los materiales nobles."
     }
   },
+
   "footer": {
     "servicesTitle": "Servicios Creativos para particulares y empresas",
     "servicesDescription": "Diseño inmersivo y narrativo 2025",
