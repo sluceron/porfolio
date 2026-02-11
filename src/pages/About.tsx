@@ -1,30 +1,16 @@
+import React from "react";
 import "../styles/About.css";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import DownloadCV from "../components/DownloadCV";
 import Lottie from "lottie-react";
-import webdesign from "../assets/images/lotties/webdesign.json";
-import brand from "../assets/images/lotties/Brand.json";
-import ai from "../assets/images/lotties/ai.json";
-import rating from "../assets/images/lotties/rating.json";
-import teacher from "../assets/images/lotties/teacher.json";
-import copy from "../assets/images/lotties/copy.json";
-import photo from "../assets/images/lotties/photo.json";
 
 import { useTranslation } from "react-i18next";
 
-const lottieMap: Record<string, any> = {
-  webdesign,
-  brand,
-  ai,
-  rating,
-  teacher,
-  copy,
-  photo,
-};
-
 const About = () => {
   const { t } = useTranslation();
+
+  const [lottieData, setLottieData] = React.useState<Record<string, any>>({});
 
   useEffect(() => {
     const track = document.querySelector(".logo-track");
@@ -46,6 +32,34 @@ const About = () => {
     : (specializationCardsRaw && typeof specializationCardsRaw === 'object'
         ? Object.values(specializationCardsRaw)
         : []);
+
+useEffect(() => {
+  const loadAnimations = async () => {
+    const loadedData: Record<string, any> = {};
+
+    // Carga todas las animaciones en paralelo y asegura que no se pierda ninguna
+    await Promise.all(
+      specializationCards.map(async (card: any) => {
+        if (card.animationKey) {
+          try {
+            const module = await import(
+              /* @vite-ignore */ `../assets/images/lotties/${card.animationKey}.json`
+            );
+            loadedData[card.animationKey] = module.default;
+          } catch (err) {
+            console.warn(`Lottie "${card.animationKey}" not found`);
+          }
+        }
+      })
+    );
+
+    setLottieData(loadedData);
+  };
+
+  if (specializationCards.length > 0) {
+    loadAnimations();
+  }
+}, [specializationCards]);
 
   const historyParagraphsRaw = t('about.history.paragraphs', { returnObjects: true });
   const historyParagraphs = Array.isArray(historyParagraphsRaw)
@@ -95,8 +109,8 @@ const About = () => {
               {specializationCards.map((card: any, index: number) => (
                 <div className="skill-card" key={index}>
                   <div className="about-lottie">
-                    {card.animationKey && lottieMap[card.animationKey] && (
-                      <Lottie animationData={lottieMap[card.animationKey]} loop={true} />
+                    {card.animationKey && lottieData[card.animationKey] && (
+                      <Lottie animationData={lottieData[card.animationKey]} loop={true} />
                     )}
                   </div>
                   <h3>
@@ -146,7 +160,7 @@ const About = () => {
             <p>{t('about.cta.paragraph')}</p>
             <div className="cta-buttons">
               <Link to="/contact" className="btn-primary">{t('about.cta.button')}</Link>
-              <DownloadCV className="btn-secondary" />
+              
             </div>
           </div>
         </div>
