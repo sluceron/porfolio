@@ -77,13 +77,15 @@
       },
       "intro": {
         "name": "Santiago Lucerón",
-        "role": "Desarrollador Frontend",
-        "location": "Santa Cruz de Tenerife, España"
+        "role": "Diseñador gráfico senior, Director de arte, Especialista en identidad corporativa.",
+        "location": "📍 Madrid, España"
       },
       "history": {
         "title": "Mi historia",
         "paragraphs": [
-          "Más de dos décadas dedicadas a transformar ideas en experiencias visuales impactantes.", "Mi trayectoria profesional ha estado marcada por la pasión por contar historias a través del diseño, trabajando con marcas del sector alimentación, bebidas premium, retail y HORECA.", "He liderado equipos creativos en proyectos que van desde startups hasta empresas consolidadas, desarrollando identidades corporativas completas, campañas 360º y estrategias visuales que conectan emocionalmente con las audiencias. Mi enfoque combina creatividad estratégica con dominio técnico, integrando las últimas tecnologías y herramientas de IA en procesos creativos para optimizar resultados sin perder la esencia humana del diseño."
+          "Más de dos décadas dedicadas a transformar ideas en experiencias visuales impactantes. Mi trayectoria profesional ha estado marcada por una pasión por el storytelling a través del diseño, trabajando con marcas en los sectores de alimentación, bebidas premium, retail y HORECA.",
+          "He liderado equipos creativos en proyectos que van desde startups hasta empresas consolidadas, desarrollando identidades corporativas completas, campañas 360º y estrategias visuales que conectan emocionalmente con las audiencias.",
+          "Mi enfoque combina creatividad estratégica con dominio técnico, integrando las últimas tecnologías y herramientas de IA en los procesos creativos para optimizar resultados sin perder la esencia humana del diseño."
         ]
       },
       "experience": {
