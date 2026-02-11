@@ -1,26 +1,27 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import Gallery from './pages/Gallery';
+import { lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Gallery = lazy(() => import('./pages/Gallery'));
 
 function App() {
   return (
     <Router>
       <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/services" component={Services} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/gallery" component={Gallery} />
-
-      </Switch>
+      <Suspense fallback={<div style={{ padding: "4rem", textAlign: "center" }}>Loading...</div>}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/services" component={Services} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/gallery" component={Gallery} />
+        </Switch>
+      </Suspense>
       <Footer />
     </Router>
   );
